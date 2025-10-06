@@ -1,5 +1,5 @@
 # Directorios sensibles y grandes que NUNCA deben ir a Git
-wp-config.php
+
 .env
 
 # WordPress core
@@ -23,6 +23,7 @@ vendor/
 *installer*
 *.zip
 *.sql
+/elmanicomiotattoo_local/wp-content/uploads/
 
 # Archivos de log y temporales
 *.log

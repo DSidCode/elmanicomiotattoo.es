@@ -7,7 +7,7 @@
 Thumbs.db
 
 # Archivos de WordPress que no deben estar en el repositorio
-/elmanicomiotattoo_local/wp-config.php
+
 /elmanicomiotattoo_local/.htaccess
 /elmanicomiotattoo_local/wp-content/uploads/
 /elmanicomiotattoo_local/wp-content/upgrade/
