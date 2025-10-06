@@ -1,0 +1,19 @@
+# Ignorar el directorio del backup y el zip
+/20251004_elmanicomiotattoo_1e3870f2804cba621527_20251004183720_archive/
+*.zip
+
+# Archivos de sistema y logs
+.DS_Store
+Thumbs.db
+
+# Archivos de WordPress que no deben estar en el repositorio
+/elmanicomiotattoo_local/wp-config.php
+/elmanicomiotattoo_local/.htaccess
+/elmanicomiotattoo_local/wp-content/uploads/
+/elmanicomiotattoo_local/wp-content/upgrade/
+/elmanicomiotattoo_local/wp-content/backups-dup-lite/
+/elmanicomiotattoo_local/wp-content/cache/
+/elmanicomiotattoo_local/wp-content/advanced-cache.php
+/elmanicomiotattoo_local/wp-content/wp-cache-config.php
+/elmanicomiotattoo_local/wp-content/smush-webp/
+/elmanicomiotattoo_local/debug.log

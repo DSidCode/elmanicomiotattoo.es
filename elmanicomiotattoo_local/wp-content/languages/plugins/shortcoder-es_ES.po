@@ -1,0 +1,677 @@
+# Translation of Plugins - Shortcoder — Create Shortcodes for Anything - Stable (latest release) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - Shortcoder — Create Shortcodes for Anything - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-08-01 09:26:01+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - Shortcoder — Create Shortcodes for Anything - Stable (latest release)\n"
+
+#: admin/edit.php:127
+msgid "If the shortcode content contains WordPress blocks HTML, select yes to execute it. Note: The CSS/JS required for the blocks should be included on the page manually as required."
+msgstr "Si el contenido del shortcode contiene HTML de bloques de WordPress, selecciona sí para ejecutarlo. Nota: El CSS/JS necesario para los bloques debe incluirse en la página manualmente según sea necesario."
+
+#: admin/edit.php:120
+msgid "Execute blocks"
+msgstr "Ejecutar bloques"
+
+#: admin/edit.php:33
+msgid "Enter display name"
+msgstr "Introduce el nombre para mostrar"
+
+#: admin/tools.php:98
+msgid "Not enough permissions to browse and insert shortcodes"
+msgstr "Permisos insuficientes para navegar e insertar shortcodes"
+
+#: admin/insert.php:97
+msgid "Default"
+msgstr "Por defecto"
+
+#: admin/edit.php:115
+msgid "Mobile only"
+msgstr "Solo móvil"
+
+#: admin/edit.php:114
+msgid "Desktop only"
+msgstr "Solo escritorio"
+
+#: admin/edit.php:113
+msgid "All devices"
+msgstr "Todos los dispositivos"
+
+#: admin/edit.php:94 admin/edit.php:104 admin/edit.php:125
+msgid "No"
+msgstr "No"
+
+#: admin/edit.php:93 admin/edit.php:103 admin/edit.php:124
+msgid "Yes"
+msgstr "Sí"
+
+#: admin/settings.php:76
+msgid "List the shortcode content in \"All shortcodes\" page."
+msgstr "Mostrar el contenido del shortcode en la página «Todos los shortcodes»."
+
+#: admin/settings.php:74
+msgid "200 characters"
+msgstr "200 caracteres"
+
+#: admin/settings.php:73
+msgid "100 characters"
+msgstr "100 caracteres"
+
+#: admin/settings.php:72
+msgid "Hidden"
+msgstr "Oculto"
+
+#: admin/settings.php:68
+msgid "Show content in \"All shortcodes\" page"
+msgstr "Mostrar contenido en la página «Todos los shortcodes»"
+
+#: admin/insert.php:77
+msgid "View/Edit"
+msgstr "Ver/Editar"
+
+#: admin/insert.php:27
+msgid "Check out:"
+msgstr "Compruébalo:"
+
+#: admin/edit.php:55
+msgid "Support"
+msgstr "Soporte"
+
+#: admin/settings.php:86
+msgid "Save settings"
+msgstr "Guardar ajustes"
+
+#: admin/edit.php:249
+msgid "Note: Your user role does not permit saving unrestricted HTML. Some tags and attributes will be removed before saving the content."
+msgstr "Nota: Tu perfil de usuario no permite guardar HTML sin restricciones. Algunas etiquetas y atributos se eliminarán antes de guardar el contenido."
+
+#: admin/admin.php:275
+msgid "Upgrade to PRO"
+msgstr "Actualizar a PRO"
+
+#: admin/admin.php:274
+msgid "View shortcodes"
+msgstr "Ver shortcodes"
+
+#: admin/edit.php:86
+msgid "Description of the shortcode for identification"
+msgstr "Descripción del shortcode para su identificación"
+
+#: admin/edit.php:82 admin/manage.php:25
+msgid "Description"
+msgstr "Descripción"
+
+#: admin/edit.php:40
+msgid "Settings"
+msgstr "Ajustes"
+
+#: admin/edit.php:313
+msgid "Pull a custom field value of the current post and display it inside the shortcode content."
+msgstr "Extrae el valor de un campo personalizado de la entrada actual y lo muestra dentro del contenido del shortcode."
+
+#: admin/edit.php:302 admin/edit.php:313
+msgid "More information"
+msgstr "Más información"
+
+#: admin/edit.php:302
+msgid "Insert parameters in content and replace them with custom values when using the shortcode."
+msgstr "Inserta parámetros en el contenido y reemplázalos con valores personalizados al usar el shortcode."
+
+#: admin/settings.php:65
+msgid "The default shortcode content when creating new shortcodes"
+msgstr "El contenido por defecto del shortcode al crear nuevos shortcodes"
+
+#: admin/settings.php:60
+msgid "Default shortcode content"
+msgstr "Contenido por defecto del shortcode"
+
+#: admin/settings.php:57
+msgid "The default editor mode when creating new shortcodes"
+msgstr "El modo por defecto del editor al crear nuevos shortcodes"
+
+#: admin/settings.php:49
+msgid "Default editor"
+msgstr "Editor por defecto"
+
+#: admin/edit.php:57
+msgid "WordPress News"
+msgstr "Noticias de WordPress"
+
+#: shortcoder.php:378
+msgid "Post slug"
+msgstr "Slug de la entrada"
+
+#: shortcoder.php:409 shortcoder.php:412
+msgid "Shortcode enclosed content"
+msgstr "Contenido encerrado en el shotcode"
+
+#: shortcoder.php:405
+msgid "Year - 2 digit"
+msgstr "Año, con 2 dígitos"
+
+#: shortcoder.php:404
+msgid "Year"
+msgstr "Año"
+
+#: shortcoder.php:403
+msgid "Month - words - full form"
+msgstr "Mes, en palabra (forma completa)"
+
+#: shortcoder.php:402
+msgid "Month - words - short form"
+msgstr "Mes, en palabra (forma corta)"
+
+#: shortcoder.php:401
+msgid "Month - leading zeros"
+msgstr "Mes, con cero inicial"
+
+#: shortcoder.php:400
+msgid "Month"
+msgstr "Mes"
+
+#: shortcoder.php:399
+msgid "Day - words - full form"
+msgstr "Día, en palabras (forma completa)"
+
+#: shortcoder.php:398
+msgid "Day - words - short form"
+msgstr "Día, en palabra (forma corta)"
+
+#: shortcoder.php:397
+msgid "Day - leading zeros"
+msgstr "Día, con cero inicial"
+
+#: shortcoder.php:396
+msgid "Day"
+msgstr "Día"
+
+#: shortcoder.php:393
+msgid "Date parameters"
+msgstr "Parámetros de la fecha"
+
+#: shortcoder.php:389
+msgid "RSS 2.0 feed URL"
+msgstr "URL del feed RSS 2.0"
+
+#: shortcoder.php:388
+msgid "Atom feed URL"
+msgstr "URL del feed de Atom"
+
+#: shortcoder.php:387
+msgid "Active theme's directory"
+msgstr "Directorio del tema activo"
+
+#: shortcoder.php:386
+msgid "Active theme's stylesheet URL"
+msgstr "URL de la hoja de estilos del tema activo"
+
+#: shortcoder.php:385
+msgid "WordPress version"
+msgstr "Versión de WordPress"
+
+#: shortcoder.php:384
+msgid "Site character set"
+msgstr "Conjunto de caracteres del sitio"
+
+#: shortcoder.php:383
+msgid "WordPress URL"
+msgstr "URL de WordPress"
+
+#: shortcoder.php:382
+msgid "Site URL"
+msgstr "URL del sitio"
+
+#: shortcoder.php:381
+msgid "Site description"
+msgstr "Descripción del sitio"
+
+#: shortcoder.php:380
+msgid "Site title"
+msgstr "Título del sitio"
+
+#: shortcoder.php:377
+msgid "Post comments count"
+msgstr "Recuento de comentarios de la entrada"
+
+#: shortcoder.php:376
+msgid "Post modified date"
+msgstr "Fecha de modificación de la entrada"
+
+#: shortcoder.php:375
+msgid "Post date"
+msgstr "Fecha de la entrada"
+
+#: shortcoder.php:374
+msgid "Post author"
+msgstr "Autor de la entrada"
+
+#: shortcoder.php:373
+msgid "Post excerpt"
+msgstr "Extracto de la entrada"
+
+#: shortcoder.php:372
+msgid "Post featured image URL"
+msgstr "URL de la imagen destacada de la entrada"
+
+#: shortcoder.php:371
+msgid "Post ID"
+msgstr "ID de la entrada"
+
+#: shortcoder.php:369
+msgid "Short URL of the post/location"
+msgstr "URL corta de la entrada/ubicación"
+
+#: shortcoder.php:368
+msgid "Title of the post/location"
+msgstr "Título de la entrada/ubicación"
+
+#: shortcoder.php:367
+msgid "URL of the post/location"
+msgstr "URL de la entrada/ubicación"
+
+#: shortcoder.php:364
+msgid "WordPress information"
+msgstr "Información de WordPress"
+
+#: admin/admin.php:265
+msgid "Open documentation"
+msgstr "Abrir la documentación"
+
+#: admin/admin.php:264
+msgid "To import from other sources like CSV, excel please read the below linked documentation."
+msgstr "Para importar de otras fuentes como CSV o Excel, por favor, lee la siguiente documentación enlazada."
+
+#: admin/admin.php:261
+msgid "Go to import page"
+msgstr "Ir a la página de importación"
+
+#: admin/admin.php:260
+msgid "The XML file downloaded through the native export process can be imported via WordPress's own import tool. Navigate to <code>Tools -> Import</code>, install the importer plugin if not installed and run the importer under WordPress section."
+msgstr "El archivo XML descargado mediante el proceso de exportación nativo puede ser importado a través de la propia herramienta de importación de WordPress. Ve a <code>Herramientas > Importar</code>, instala el plugin de importación, si no está instalado, y ejecuta el importador en la sección de WordPress."
+
+#: admin/admin.php:257
+msgid "Go to export page"
+msgstr "Ir a la página de exportación"
+
+#: admin/admin.php:256
+msgid "WordPress has a native exporter tool which can be used to export shortcoder data. Navigate to <code>Tools -> Export</code> and select \"Shortcoder\" as the content to export."
+msgstr "WordPress tiene una herramienta de exportación nativa que puede utilizarse para exportar los datos de Shortcoder. Ve a <code>Herramientas > Exportar</code> y selecciona «Shortcoder» como el contenido a exportar."
+
+#: admin/admin.php:253
+msgid "Documentation"
+msgstr "Documentación"
+
+#: admin/admin.php:250 admin/admin.php:264
+msgid "Import from other sources"
+msgstr "Importar de otras fuentes"
+
+#: admin/admin.php:249 admin/admin.php:260
+msgid "Import"
+msgstr "Importar"
+
+#: admin/admin.php:248 admin/admin.php:256
+msgid "Export"
+msgstr "Exportar"
+
+#: admin/admin.php:227
+msgid "Continue using Shortcoder"
+msgstr "Continuar usando Shortcoder"
+
+#: admin/admin.php:159
+msgid "Switching editor will refresh the page. Please save your changes before refreshing. Do you want to refresh the page now ?"
+msgstr "Al cambiar de editor se actualizará la página. Por favor, guarda tus cambios antes de actualizar. ¿Quieres actualizar la página ahora?"
+
+#: admin/admin.php:107
+msgid "Tags list navigation"
+msgstr "Navegación de la lista de etiquetas"
+
+#: admin/admin.php:106
+msgid "Tags list"
+msgstr "Lista de etiquetas"
+
+#: admin/admin.php:105
+msgid "No tags"
+msgstr "No hay etiquetas"
+
+#: admin/admin.php:104
+msgid "Not Found"
+msgstr "No encontrado"
+
+#: admin/admin.php:103
+msgid "Search Tags"
+msgstr "Buscar etiquetas"
+
+#: admin/admin.php:102
+msgid "Popular Tags"
+msgstr "Etiquetas populares"
+
+#: admin/admin.php:101
+msgid "Choose from the most used"
+msgstr "Elige entre las más usadas"
+
+#: admin/admin.php:100
+msgid "Add or remove tags"
+msgstr "Añadir o eliminar etiquetas"
+
+#: admin/admin.php:99
+msgid "Separate tags with commas"
+msgstr "Separa las etiquetas con comas"
+
+#: admin/admin.php:98
+msgid "View Tag"
+msgstr "Ver la etiqueta"
+
+#: admin/admin.php:97
+msgid "Update Tag"
+msgstr "Actualizar la etiqueta"
+
+#: admin/admin.php:96
+msgid "Edit Tag"
+msgstr "Editar la etiqueta"
+
+#: admin/admin.php:95
+msgid "Add New Tag"
+msgstr "Añadir una nueva etiqueta"
+
+#: admin/admin.php:94
+msgid "New Tag Name"
+msgstr "Nombre de la nueva etiqueta"
+
+#: admin/admin.php:93
+msgid "Parent Tag:"
+msgstr "Etiqueta principal:"
+
+#: admin/admin.php:92
+msgid "Parent Tag"
+msgstr "Etiqueta principal"
+
+#: admin/admin.php:91
+msgid "All Tags"
+msgstr "Todas las etiquetas"
+
+#: admin/admin.php:90
+msgid "Tags"
+msgstr "Etiquetas"
+
+#: admin/admin.php:89
+msgctxt "Taxonomy Singular Name"
+msgid "Tag"
+msgstr "Etiqueta"
+
+#: admin/admin.php:88
+msgctxt "Taxonomy General Name"
+msgid "Tags"
+msgstr "Etiquetas"
+
+#: admin/admin.php:56
+msgid "Filter shortcodes list"
+msgstr "Filtrar la lista de shortcodes"
+
+#: admin/admin.php:55
+msgid "Shortcodes list navigation"
+msgstr "Navegación de la lista de shortcodes"
+
+#: admin/admin.php:54
+msgid "Shortcodes list"
+msgstr "Lista de shortcodes"
+
+#: admin/admin.php:53
+msgid "Uploaded to this shortcode"
+msgstr "Subido a este shortcode"
+
+#: admin/admin.php:52
+msgid "Insert into shortcode"
+msgstr "Insertar en el shortcode"
+
+#: admin/admin.php:51
+msgid "Use as featured image"
+msgstr "Usar como imagen destacada"
+
+#: admin/admin.php:50
+msgid "Remove featured image"
+msgstr "Eliminar la imagen destacada"
+
+#: admin/admin.php:49
+msgid "Set featured image"
+msgstr "Establecer la imagen destacada"
+
+#: admin/admin.php:48
+msgid "Featured Image"
+msgstr "Imagen destacada"
+
+#: admin/admin.php:47
+msgid "Not found in Trash"
+msgstr "No encontrado en la papelera"
+
+#: admin/admin.php:46
+msgid "Not found"
+msgstr "No encontrado"
+
+#: admin/admin.php:45
+msgid "Search Shortcode"
+msgstr "Buscar un shortcode"
+
+#: admin/admin.php:44
+msgid "View Shortcodes"
+msgstr "Ver los shortcodes"
+
+#: admin/admin.php:43
+msgid "View Shortcode"
+msgstr "Ver el shortcode"
+
+#: admin/admin.php:41
+msgid "Edit Shortcode"
+msgstr "Editar el shortcode"
+
+#: admin/admin.php:40
+msgid "New Shortcode"
+msgstr "Nuevo shortcode"
+
+#: admin/admin.php:37
+msgid "All Shortcodes"
+msgstr "Todos los shortcodes"
+
+#: admin/admin.php:36
+msgid "Parent Shortcode:"
+msgstr "Shortcode principal:"
+
+#: admin/admin.php:35
+msgid "Shortcode Attributes"
+msgstr "Atributos del shortcode"
+
+#: admin/admin.php:34
+msgid "Shortcode Archives"
+msgstr "Archivos de shortcodes"
+
+#: admin/admin.php:31
+msgctxt "Post Type Singular Name"
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: admin/admin.php:30
+msgctxt "Post Type General Name"
+msgid "Shortcoder"
+msgstr "Shortcoder"
+
+#: admin/admin.php:33 admin/admin.php:60 admin/manage.php:24
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: admin/edit.php:319
+msgid "Only alphabets, numbers, underscore and hyphens are allowed. Cannot be empty."
+msgstr "Solo se permiten letras, números, guiones bajos y guiones. No puede estar vacío."
+
+#: admin/edit.php:318
+msgid "Insert custom field"
+msgstr "Insertar el campo personalizado"
+
+#: admin/edit.php:314
+msgid "Enter custom field name"
+msgstr "Introduce el nombre del campo personalizado"
+
+#: admin/edit.php:311
+msgid "Custom Fields"
+msgstr "Campos personalizados"
+
+#: admin/edit.php:308
+msgid "Only alphabets, numbers, underscores and hyphens are allowed. Custom parameters are case insensitive"
+msgstr "Solo se permiten letras, números y guiones bajos. Los parámetros personalizados no distinguen mayúsculas y minúsculas"
+
+#: admin/edit.php:307
+msgid "Insert parameter"
+msgstr "Insertar el parámetro"
+
+#: admin/edit.php:305 admin/edit.php:316
+msgid "Default value"
+msgstr "Valor por defecto"
+
+#: admin/edit.php:303
+msgid "Enter custom parameter name"
+msgstr "Introduce el nombre del parámetro personalizado"
+
+#: admin/edit.php:300
+msgid "Custom parameter"
+msgstr "Parámetro personalizado"
+
+#: admin/edit.php:222
+msgid "Insert shortcode parameters"
+msgstr "Insertar los parámetros del shortcode"
+
+#: admin/edit.php:202
+msgid "Switch editor"
+msgstr "Cambiar el editor"
+
+#: admin/edit.php:196 admin/settings.php:55
+msgid "Code editor"
+msgstr "Editor de código"
+
+#: admin/edit.php:195 admin/settings.php:54
+msgid "Visual editor"
+msgstr "Editor visual"
+
+#: admin/edit.php:194 admin/settings.php:53
+msgid "Text editor"
+msgstr "Editor de texto"
+
+#: admin/edit.php:117
+msgid "Select the devices where the shortcode should be executed. Note: If any caching plugin is used, a separate caching for desktop and mobile might be required."
+msgstr "Selecciona los dispositivos en los que debe ejecutarse el shortcode. Nota: si se usa un plugin de caché, puede ser necesario almacenar en caché por separado para equipos de escritorio y móviles."
+
+#: admin/edit.php:109
+msgid "Execute shortcode on devices"
+msgstr "Ejecutar el shortcode en los dispositivos"
+
+#: admin/edit.php:106
+msgid "Select to disable the shortcode from executing for administrators."
+msgstr "Selecciona esta opción para desactivar la ejecución del shortcode para los administradores."
+
+#: admin/edit.php:99
+msgid "Disable shortcode for administrators"
+msgstr "Desactivar el shortcode para los administradores"
+
+#: admin/edit.php:96
+msgid "Select to disable the shortcode from executing in all the places where it is used."
+msgstr "Selecciona esta opción para desactivar la ejecución del shortcode en todos los lugares donde se utiliza."
+
+#: admin/edit.php:79
+msgid "Name of the shortcode to display when it is listed"
+msgstr "Nombre del shortcode a mostrar cuando se lista"
+
+#: admin/edit.php:33 admin/edit.php:75
+msgid "Display name"
+msgstr "Nombre a mostrar"
+
+#: admin/edit.php:53
+msgid "Shortcode settings"
+msgstr "Ajustes del shortcode"
+
+#: admin/edit.php:37
+msgid "Your shortcode"
+msgstr "Tu shortcode"
+
+#: admin/edit.php:32
+msgid "Enter shortcode name"
+msgstr "Introduce el nombre del shortcode"
+
+#: admin/edit.php:32
+msgid "Name of the shortcode. Allowed characters are alphabets, numbers, hyphens and underscore."
+msgstr "Nombre del shortcode. Los caracteres permitidos son letras, números, guiones y guiones bajos."
+
+#: admin/insert.php:120
+msgid "No shortcodes match search term !"
+msgstr "¡No hay shortcodes que coincidan con el término de búsqueda!"
+
+#: admin/insert.php:112
+msgid "Has enclosed content parameter"
+msgstr "Ha encerrado el parámetro de contenido"
+
+#: admin/insert.php:110
+msgid "Insert shortcode"
+msgstr "Insertar el shortcode"
+
+#: admin/insert.php:106
+msgid "No parameters present in this shortcode"
+msgstr "No hay parámetros presentes en este shortcode"
+
+#: admin/insert.php:87
+msgid "Available parameters"
+msgstr "Parámetros disponibles"
+
+#: admin/insert.php:80
+msgid "Insert"
+msgstr "Insertar"
+
+#: admin/edit.php:39 admin/insert.php:79 admin/manage.php:40
+msgid "Copy"
+msgstr "Copiar"
+
+#: admin/tools.php:83
+msgid "Insert shortcode to editor"
+msgstr "Insertar el shortcode en el editor"
+
+#. Description of the plugin
+#: shortcoder.php
+msgid "Shortcoder plugin allows to create a custom shortcodes for HTML, JavaScript and other snippets. Now the shortcodes can be used in posts/pages and the snippet will be replaced in place."
+msgstr "El plugin Shortcoder permite crear un shortcode personalizado para HTML, JavaScript y otros fragmentos de código. Ahora los shortcodes pueden usarse en entradas y páginas y el fragmento de código será reemplazado en su lugar."
+
+#. Plugin URI of the plugin
+#: shortcoder.php
+msgid "https://www.aakashweb.com/wordpress-plugins/shortcoder/"
+msgstr "https://www.aakashweb.com/wordpress-plugins/shortcoder/"
+
+#. Author URI of the plugin
+#: shortcoder.php
+msgid "https://www.aakashweb.com/"
+msgstr "https://www.aakashweb.com/"
+
+#. Author of the plugin
+#: shortcoder.php
+msgid "Aakash Chakravarthy"
+msgstr "Aakash Chakravarthy"
+
+#. Plugin Name of the plugin
+#: shortcoder.php admin/admin.php:32
+msgid "Shortcoder"
+msgstr "Shortcoder"
+
+#: admin/edit.php:89
+msgid "Temporarily disable shortcode"
+msgstr "Desactivar temporalmente este shortcode"
+
+#: admin/admin.php:42
+msgid "Update Shortcode"
+msgstr "Actualizar el shortcode"
+
+#: admin/admin.php:38 admin/admin.php:39
+msgid "Create shortcode"
+msgstr "Crear un shortcode"
+
+#: admin/insert.php:16
+msgid "Create Shortcode"
+msgstr "Crear shortcode"

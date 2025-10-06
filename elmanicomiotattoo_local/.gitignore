@@ -1,0 +1,34 @@
+# Directorios sensibles y grandes que NUNCA deben ir a Git
+wp-config.php
+.env
+
+# WordPress core
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/index.php
+/xmlrpc.php
+
+# Archivos y directorios de contenido generados por el usuario
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup-db/
+
+# Dependencias de desarrollo
+node_modules/
+vendor/
+
+# Archivos de respaldo y de instalación de Duplicator
+*installer*
+*.zip
+*.sql
+
+# Archivos de log y temporales
+*.log
+*.swo
+*.swp
+
+# Configuraciones de IDE
+.vscode/
+.idea/

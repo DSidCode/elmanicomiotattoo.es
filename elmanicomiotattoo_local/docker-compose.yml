@@ -1,0 +1,29 @@
+services:
+  db:
+    image: mariadb:10.6 # Usamos MariaDB, que es compatible con MySQL
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+
+  wordpress:
+    image: wordpress:latest
+    volumes:
+      - .:/var/www/html # Mapea la carpeta local a la carpeta web del contenedor
+    ports:
+      - "8080:80" # El sitio será accesible en http://localhost:8080
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      WORDPRESS_DB_NAME: ${MYSQL_DATABASE}
+    depends_on:
+      - db
+
+volumes:
+  db_data: {}
