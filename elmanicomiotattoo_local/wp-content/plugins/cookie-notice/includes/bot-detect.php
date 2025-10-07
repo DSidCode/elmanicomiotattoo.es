@@ -170,8 +170,8 @@ class Cookie_Notice_Bot_Detect {
 	public function is_crawler( $user_agent = null ) {
 		$agent = (string)( is_null( $user_agent ) ? $this->user_agent : $user_agent );
 		$agent = preg_replace( '/' . $this->get_exclusions() . '/i', '', $agent );
-
-		if ( strlen( trim( $agent ) ) === 0 )
+		
+		if ( strlen( trim( $agent ) ) === 0 ) 
 			return false;
 		else
 			$result = preg_match( '/' . $this->get_regex() . '/i', trim( $agent ), $matches );
