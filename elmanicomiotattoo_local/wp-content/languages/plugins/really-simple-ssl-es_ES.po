@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Really Simple Security &#8211; Simple and Performant Security (formerly Really Simple SSL) - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-08-26 11:58:33+0000\n"
+"PO-Revision-Date: 2025-10-07 13:05:27+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,42 @@ msgstr ""
 "X-Generator: GlotPress/4.0.1\n"
 "Language: es\n"
 "Project-Id-Version: Plugins - Really Simple Security &#8211; Simple and Performant Security (formerly Really Simple SSL) - Stable (latest release)\n"
+
+#: class-wp-cli.php:1550
+msgid "Reset rsssl_two_fa_reminder_sent meta before sending."
+msgstr "Restablecer el metadato rsssl_two_fa_reminder_sent antes de enviar."
+
+#: class-wp-cli.php:1545
+msgid "Send 2FA reminders for the current selection."
+msgstr "Enviar recordatorios de 2FA para la selección actual."
+
+#: class-wp-cli.php:1540
+msgid "Reset rsssl_two_fa_reminder_sent meta for a clean run."
+msgstr "Restablecer el metadato rsssl_two_fa_reminder_sent para una ejecución limpia."
+
+#: class-wp-cli.php:1539
+msgid "Output format: table|json|csv (default: table)."
+msgstr "Formato de salida: table|json|csv (predeterminado: table)."
+
+#: class-wp-cli.php:1538 class-wp-cli.php:1549
+msgid "Traverse all subsites in the network."
+msgstr "Recorrer todos los subsitios de la red."
+
+#: class-wp-cli.php:1537 class-wp-cli.php:1548
+msgid "Limit to a single blog_id (multisite)."
+msgstr "Limitar a un único blog_id (multisitio)."
+
+#: class-wp-cli.php:1536 class-wp-cli.php:1547
+msgid "Filter by user role (default: all)."
+msgstr "Filtrar por rol de usuario (predeterminado: todos)."
+
+#: class-wp-cli.php:1534
+msgid "Preview users in scope for 2FA reminders (dry-run)."
+msgstr "Previsualizar usuarios en el alcance para recordatorios de 2FA (simulación)."
+
+#: class-wp-cli.php:1529
+msgid "Reset the settings for the Login Protection."
+msgstr "Restablece la configuración de la protección de inicio de sesión."
 
 #. Author URI of the plugin
 #: rlrsssl-really-simple-ssl.php
@@ -48,23 +84,23 @@ msgstr "Correo de verificación enviado"
 msgid "A new verification code has been sent to your email address."
 msgstr "Se ha enviado un nuevo código de verificación a tu dirección de correo electrónico."
 
-#: functions.php:477
+#: functions.php:517
 msgid "Error occurred"
 msgstr "Se ha producido un error"
 
-#: functions.php:469
+#: functions.php:509
 msgid "Failed to send"
 msgstr "No se pudo enviar"
 
-#: functions.php:465 functions.php:471 functions.php:479
+#: functions.php:505 functions.php:511 functions.php:519
 msgid "Resend verification email"
 msgstr "Reenviar correo de verificación"
 
-#: functions.php:463
+#: functions.php:503
 msgid "Email sent!"
 msgstr "¡Correo enviado!"
 
-#: functions.php:452
+#: functions.php:492
 msgid "Sending..."
 msgstr "Enviando..."
 
@@ -104,15 +140,15 @@ msgstr "Habilitar la autenticación por correo electrónico para:"
 msgid "Email log in will send an authentication code to the user’s email address. This is considered less secure than other 2FA methods."
 msgstr "El inicio de sesión por correo electrónico enviará un código de autenticación a la dirección de correo electrónico del usuario. Se considera menos seguro que otros métodos de autenticación en dos pasos."
 
-#: settings/config/fields/two-fa.php:72
+#: settings/config/fields/two-fa.php:69
 msgid "During the grace period users can configure their secure authentication method. When the grace period ends, users for which secure authentication is enforced won’t be able to log in unless secure authentication is correctly configured. The grace period is also applied to new users."
 msgstr "Durante el período de gracia, los usuarios pueden configurar su método de autenticación segura. Cuando finalice el período de gracia, los usuarios para los que se haya exigido la autenticación segura no podrán iniciar sesión a menos que la autenticación segura esté configurada correctamente. El período de gracia también se aplica a los nuevos usuarios."
 
-#: settings/config/fields/two-fa.php:51
+#: settings/config/fields/two-fa.php:54
 msgid "Passkeys are a very secure and convenient way to log in. It allows the user to authenticate using their device, browser or password manager."
 msgstr "Las claves de acceso son una forma muy segura y conveniente de iniciar sesión. Permiten al usuario autenticarse usando su dispositivo, navegador o gestor de contraseñas."
 
-#: settings/config/fields/two-fa.php:49
+#: settings/config/fields/two-fa.php:52
 msgid "Allow secure log in with Passkeys"
 msgstr "Permitir inicio de sesión seguro con claves de acceso"
 
@@ -136,11 +172,11 @@ msgstr "Lo sentimos, no tiene permiso para acceder a los usuarios sin autenticac
 msgid "Email authentication is not active for this user"
 msgstr "La autenticación por correo electrónico no está activa para este usuario"
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1358
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1361
 msgid "Two-Factor Authentication Setup"
 msgstr "Configuración de la autenticación de dos factores"
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:989
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:985
 msgid "Authentication provider not specified or invalid."
 msgstr "Proveedor de autenticación no especificado o no válido."
 
@@ -196,31 +232,31 @@ msgstr "Dispositivo"
 msgid "Online Booking System"
 msgstr "Sistema de reservas en línea"
 
-#: class-wp-cli.php:1230
+#: class-wp-cli.php:1392
 msgid "Pre-flight checks passed."
 msgstr "Verificaciones preliminares superadas."
 
-#: class-wp-cli.php:1223
+#: class-wp-cli.php:1385
 msgid ".htaccess file (%s) is not writable. Redirects cannot be configured automatically."
 msgstr "El archivo .htaccess (%s) no se puede escribir. Las redirecciones no se pueden configurar automáticamente."
 
-#: class-wp-cli.php:1208
+#: class-wp-cli.php:1370
 msgid "Reached %s, but received an error response code: %d. HTTPS is not properly configured."
 msgstr "Se accedió a %s, pero se recibió un código de respuesta de error: %d. HTTPS no está configurado correctamente."
 
-#: class-wp-cli.php:1186
+#: class-wp-cli.php:1348
 msgid "Failed to reach %s. The site does not appear to be accessible over HTTPS (Error: %s). Check debug logs for details."
 msgstr "No se pudo acceder a %s. El sitio no parece estar accesible a través de HTTPS (Error: %s). Consulte los registros de depuración para más detalles."
 
-#: class-wp-cli.php:1170
+#: class-wp-cli.php:1332
 msgid "Failed to reach %s. The site does not appear to be accessible over HTTPS. Please ensure your server is configured for SSL."
 msgstr "No se pudo acceder a %s. El sitio no parece estar accesible a través de HTTPS. Asegúrese de que su servidor esté configurado para SSL."
 
-#: class-wp-cli.php:83
+#: class-wp-cli.php:86
 msgid "It seems that no valid license key is activated for this domain. Activate your license key using the `%s` command, or purchase a valid license key via https://really-simple-ssl.com/pro"
 msgstr "Parece que no hay una clave de licencia válida activada para este dominio. Active su clave de licencia usando el comando %s, o compre una clave de licencia válida en https://really-simple-ssl.com/pro"
 
-#: class-wp-cli.php:65
+#: class-wp-cli.php:68
 msgid "This command is related to functionality available in Really Simple Security Pro, please consider upgrading to unlock all powerful security features. Read more: https://really-simple-ssl.com/pro"
 msgstr "Este comando está relacionado con una funcionalidad disponible en Really Simple Security Pro. Considere actualizar para desbloquear todas las potentes funciones de seguridad. Más información: https://really-simple-ssl.com/pro"
 
@@ -240,188 +276,184 @@ msgstr "Contraseña"
 msgid "Username or Email Address"
 msgstr "Nombre de usuario o dirección de correo electrónico"
 
-#: class-wp-cli.php:1514
+#: class-wp-cli.php:1697
 msgid "Flag to remove a permanent block."
 msgstr "Marca para eliminar un bloqueo permanente."
 
-#: class-wp-cli.php:1508
+#: class-wp-cli.php:1691
 msgid "The username to remove the block for."
 msgstr "El nombre de usuario para eliminar el bloqueo."
 
-#: class-wp-cli.php:1502
+#: class-wp-cli.php:1685
 msgid "Remove a blocked username from the limit login attempts table."
 msgstr "Quitar un nombre de usuario bloqueado de la tabla de límite de intentos de acceso."
 
-#: class-wp-cli.php:1490
+#: class-wp-cli.php:1673
 msgid "The username to block."
 msgstr "El nombre de usuario a bloquear."
 
-#: class-wp-cli.php:1484
+#: class-wp-cli.php:1667
 msgid "Add a blocked username to the limit login attempts table."
 msgstr "Añadir un nombre de usuario bloqueado a la tabla de límite de intentos de acceso."
 
-#: class-wp-cli.php:1479
+#: class-wp-cli.php:1662
 msgid "Remove a trusted username from the limit login attempts table."
 msgstr "Quitar un nombre de usuario fiable de la tabla de límite de intentos de acceso."
 
-#: class-wp-cli.php:1474
+#: class-wp-cli.php:1657
 msgid "Add a trusted username to the limit login attempts table."
 msgstr "Añadir un nombre de usuario fiable a la tabla de límite de intentos de acceso."
 
-#: class-wp-cli.php:1456
+#: class-wp-cli.php:1639
 msgid "Remove a blocked IP from the limit login attempts table."
 msgstr "Quitar una IP bloqueada de la tabla de límite de intentos de acceso."
 
-#: class-wp-cli.php:1438
+#: class-wp-cli.php:1621
 msgid "Add a blocked IP to the limit login attempts table."
 msgstr "Añadir una IP bloqueada a la tabla de límite de intentos de acceso."
 
-#: class-wp-cli.php:1433
+#: class-wp-cli.php:1616
 msgid "Remove a trusted IP from the limit login attempts table."
 msgstr "Quitar una IP fiable de la tabla de límite de intentos de acceso."
 
-#: class-wp-cli.php:1428
+#: class-wp-cli.php:1611
 msgid "Add a trusted IP to the limit login attempts table."
 msgstr "Añadir una IP fiable a la tabla de límite de intentos de acceso."
 
-#: class-wp-cli.php:1423
+#: class-wp-cli.php:1606
 msgid "Remove a trusted IP from the firewall."
 msgstr "Elimina una IP confiable del cortafuegos."
 
-#: class-wp-cli.php:1418
+#: class-wp-cli.php:1601
 msgid "Add a trusted IP to the firewall."
 msgstr "Añade una IP confiable al cortafuegos."
 
-#: class-wp-cli.php:1413
+#: class-wp-cli.php:1596
 msgid "Show blocked IP's."
 msgstr "Muestra las IPs bloqueadas."
 
-#: class-wp-cli.php:1407
+#: class-wp-cli.php:1590
 msgid "The IP to remove the block for."
 msgstr "La IP para eliminar el bloqueo."
 
-#: class-wp-cli.php:1401
+#: class-wp-cli.php:1584
 msgid "Remove IP block."
 msgstr "Eliminar bloqueo de IP."
 
-#: class-wp-cli.php:1395
+#: class-wp-cli.php:1578
 msgid "Optional note for the block."
 msgstr "Nota opcional para el bloqueo."
 
-#: class-wp-cli.php:1389 class-wp-cli.php:1450 class-wp-cli.php:1468
-#: class-wp-cli.php:1496
+#: class-wp-cli.php:1572 class-wp-cli.php:1633 class-wp-cli.php:1651
+#: class-wp-cli.php:1679
 msgid "Flag to add a permanent block."
 msgstr "Marca para añadir un bloqueo permanente."
 
-#: class-wp-cli.php:1383 class-wp-cli.php:1444 class-wp-cli.php:1462
+#: class-wp-cli.php:1566 class-wp-cli.php:1627 class-wp-cli.php:1645
 msgid "The IP to block."
 msgstr "La IP a bloquear."
 
-#: class-wp-cli.php:1377
+#: class-wp-cli.php:1560
 msgid "Add IP block."
 msgstr "Añadir bloqueo de IP."
 
-#: class-wp-cli.php:1372
+#: class-wp-cli.php:1555
 msgid "Update the advanced-headers.php with the latest rules."
 msgstr "Actualiza el archivo advanced-headers.php con las últimas reglas."
 
-#: class-wp-cli.php:1367
-msgid "Reset the 2FA status of a user to disabled."
-msgstr "Restablece el estado de 2FA de un usuario a desactivado."
-
-#: class-wp-cli.php:1362
+#: class-wp-cli.php:1524
 msgid "Remove the lock file for safe mode."
 msgstr "Elimina el archivo de bloqueo para el modo seguro."
 
-#: class-wp-cli.php:1357
+#: class-wp-cli.php:1519
 msgid "Add a lock file for safe mode."
 msgstr "Añade un archivo de bloqueo para el modo seguro."
 
-#: class-wp-cli.php:1352
+#: class-wp-cli.php:1514
 msgid "Deactivate the license."
 msgstr "Desactiva la licencia."
 
-#: class-wp-cli.php:1346
+#: class-wp-cli.php:1508
 msgid "The license key to activate."
 msgstr "La clave de licencia para activar."
 
-#: class-wp-cli.php:1340
+#: class-wp-cli.php:1502
 msgid "Activate a license key. Usage: wp rsssl activate_license YOUR_LICENSE_KEY."
 msgstr "Activa una clave de licencia. Uso: wp rsssl activate_license TU_CLAVE_DE_LICENCIA."
 
-#: class-wp-cli.php:1335
+#: class-wp-cli.php:1497
 msgid "Deactivate vulnerability scanning."
 msgstr "Desactivar el análisis de vulnerabilidades."
 
-#: class-wp-cli.php:1330
+#: class-wp-cli.php:1492
 msgid "Activate vulnerability scanning."
 msgstr "Activar el análisis de vulnerabilidades."
 
-#: class-wp-cli.php:1325
+#: class-wp-cli.php:1487
 msgid "Deactivate limit login attempts."
 msgstr "Desactivar el límite de intentos de acceso."
 
-#: class-wp-cli.php:1320
+#: class-wp-cli.php:1482
 msgid "Activate limit login attempts."
 msgstr "Activar límite de intentos de acceso."
 
-#: class-wp-cli.php:1315
+#: class-wp-cli.php:1477
 msgid "Deactivate password security features."
 msgstr "Desactivar las funciones de seguridad de contraseña."
 
-#: class-wp-cli.php:1310
+#: class-wp-cli.php:1472
 msgid "Activate password security features."
 msgstr "Activar las funciones de seguridad de contraseña."
 
-#: class-wp-cli.php:1305
+#: class-wp-cli.php:1467
 msgid "Deactivate Two-Factor Authentication."
 msgstr "Desactivar la identificación en dos factores."
 
-#: class-wp-cli.php:1300
+#: class-wp-cli.php:1462
 msgid "Activate Two-Factor Authentication."
 msgstr "Activar la identificación en dos factores."
 
-#: class-wp-cli.php:1295
+#: class-wp-cli.php:1457
 msgid "Deactivate the firewall."
 msgstr "Desactiva el cortafuegos."
 
-#: class-wp-cli.php:1290
+#: class-wp-cli.php:1452
 msgid "Activate the firewall."
 msgstr "Activa el cortafuegos."
 
-#: class-wp-cli.php:1285
+#: class-wp-cli.php:1447
 msgid "Deactivate essential security headers."
 msgstr "Desactivar las cabeceras de seguridad esenciales."
 
-#: class-wp-cli.php:1280
+#: class-wp-cli.php:1442
 msgid "Activate essential security headers."
 msgstr "Activar las cabeceras de seguridad esenciales."
 
-#: class-wp-cli.php:1275
+#: class-wp-cli.php:1437
 msgid "Deactivate all recommended features."
 msgstr "Desactivar todas las funciones recomendadas."
 
-#: class-wp-cli.php:1270
+#: class-wp-cli.php:1432
 msgid "Activate all recommended features."
 msgstr "Activar todas las funciones recomendadas."
 
-#: class-wp-cli.php:1264
+#: class-wp-cli.php:1426
 msgid "Value to set for the option."
 msgstr "Valor a establecer para la opción."
 
-#: class-wp-cli.php:1258
+#: class-wp-cli.php:1420
 msgid "Name of the option to update."
 msgstr "Nombre de la opción a actualizar."
 
-#: class-wp-cli.php:1252
+#: class-wp-cli.php:1414
 msgid "Update a Really Simple Security option. Usage: wp rsssl update_option --name=option_name --value=option_value. Use 0 and 1 for booleans."
 msgstr "Actualiza una opción de Really Simple Security. Uso: wp rsssl update_option --name=option_name --value=option_value. Usa 0 y 1 para booleanos."
 
-#: class-wp-cli.php:1247
+#: class-wp-cli.php:1409
 msgid "Deactivate SSL on the site."
 msgstr "Desactiva SSL en el sitio."
 
-#: class-wp-cli.php:1242
+#: class-wp-cli.php:1404
 msgid "Activate SSL on the site."
 msgstr "Activa SSL en el sitio."
 
@@ -535,7 +567,7 @@ msgid "Date Added"
 msgstr "Fecha añadida"
 
 #: settings/config/fields/firewall.php:180
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/src/Settings/firewall/UserAgentModal.js:104
 msgid "User-Agent"
 msgstr "User-Agent"
@@ -627,12 +659,12 @@ msgstr "Encabezados de Seguridad Esenciales"
 msgid "Really Simple Security dashboard"
 msgstr "Escritorio de Really Simple Security"
 
-#: settings/config/fields/two-fa.php:76 settings/config/fields/two-fa.php:77
-#: settings/config/fields/two-fa.php:78
+#: settings/config/fields/two-fa.php:73 settings/config/fields/two-fa.php:74
+#: settings/config/fields/two-fa.php:75
 msgid "%s days"
 msgstr "%s días"
 
-#: settings/config/fields/two-fa.php:71
+#: settings/config/fields/two-fa.php:68
 msgid "Allow grace period"
 msgstr "Permitir período de gracia"
 
@@ -709,48 +741,48 @@ msgctxt "site"
 msgid "&larr; Go to %s"
 msgstr "← Ir a %s"
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1252
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1248
 msgid "Password Reset"
 msgstr "Restablecimiento de contraseña"
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1245
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1241
 msgid "If you are the owner of this account, please check your email for instructions on regaining access."
 msgstr "Si eres el propietario de esta cuenta, por favor revisa tu correo electrónico para obtener instrucciones sobre cómo recuperar el acceso."
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1241
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1237
 msgid "There have been too many failed two-factor authentication attempts, which often indicates that the password has been compromised. The password has been reset in order to protect the account."
 msgstr "Se han producido demasiados intentos fallidos de autenticación de dos factores, lo que a menudo indica que la contraseña ha sido comprometida. La contraseña se ha restablecido para proteger la cuenta."
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1077
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1073
 msgid "Invalid verification code."
 msgstr "Código de verificación no válido."
 
 #. translators: %s: time delay between login attempts
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1015
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1011
 msgid "Too many invalid verification codes, you can try again in %s. This limit protects your account against automated attacks."
 msgstr "Demasiados códigos de verificación no válidos, puedes volver a intentarlo en %s. Este límite protege tu cuenta contra ataques automatizados."
 
 #. translators: %s: URL to reset password
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:777
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:773
 msgid "Your password was reset because of too many failed Two Factor attempts. You will need to <a href=\"%s\">create a new password</a> to regain access. Please check your email for more information."
 msgstr "Tu contraseña fue restablecida debido a demasiados intentos fallidos de Dos Factores. Necesitarás <a href=\"%s\">crear una nueva contraseña</a> para recuperar el acceso. Por favor, revisa tu correo electrónico para más información."
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:722
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:718
 msgid "Warning: There has been %1$s failed login attempt on your account without providing a valid two-factor token. The last failed login occurred %2$s ago. If this wasn't you, you should reset your password."
 msgid_plural "Warning: %1$s failed login attempts have been detected on your account without providing a valid two-factor token. The last failed login occurred %2$s ago. If this wasn't you, you should reset your password."
 msgstr[0] "Advertencia: Ha habido %1$s intento de inicio de sesión fallido en tu cuenta sin proporcionar un token de dos factores válido. El último intento fallido ocurrió hace %2$s. Si no fuiste tú, deberías restablecer tu contraseña."
 msgstr[1] "Advertencia: Ha habido %1$s intento de inicio de sesión fallido en tu cuenta sin proporcionar un token de dos factores válido. El último intento fallido ocurrió hace %2$s. Si no fuiste tú, deberías restablecer tu contraseña."
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1461
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1464
 msgid "Failed to create a login nonce."
 msgstr "Error al crear un nonce de inicio de sesión."
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:625
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:621
 msgid "API login for user disabled."
 msgstr "Inicio de sesión de API para usuario desactivado."
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:551
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1304
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:547
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1300
 msgid "Your 2FA grace period expired. Please contact your site administrator to regain access and to configure 2FA."
 msgstr "Tu período de gracia para 2FA ha expirado. Por favor, contacta a tu administrador del sitio para recuperar el acceso y configurar 2FA."
 
@@ -762,11 +794,11 @@ msgstr "Aplicación de Autenticación"
 msgid "not set"
 msgstr "no establecido"
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1443
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1446
 msgid "Could not copy text: "
 msgstr "No se pudo copiar el texto:"
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1442
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1445
 msgid "Key copied"
 msgstr "Clave copiada"
 
@@ -971,7 +1003,7 @@ msgstr "Protege tu formulario de inicio de sesión con Limitar Intentos de Inici
 msgid "Implement Two-Factor Authentication or Passkey login."
 msgstr "Implementa la Autenticación de Dos Fases o el inicio de sesión con Contraseña."
 
-#: class-admin.php:682
+#: class-admin.php:686
 msgid "View Dashboard"
 msgstr "Ver Escritorio"
 
@@ -1026,7 +1058,7 @@ msgstr "Los códigos solo están disponibles durante 5 minutos"
 
 #: assets/templates/two_fa/profile-settings.php:52
 #: assets/templates/two_fa/totp-config.php:23
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1441
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1444
 msgid "Download Backup Codes"
 msgstr "Descargar Códigos de Respaldo"
 
@@ -1420,7 +1452,7 @@ msgstr "reCaptcha v2"
 msgid "Choose your provider"
 msgstr "Elige tu proveedor"
 
-#: settings/config/menu.php:545 settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/config/menu.php:545 settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/src/Settings/firewall/UserAgentTable.js:275
 #: settings/src/Settings/GeoBlockList/GeoDatatable.js:520
 msgid "Restrict access from specific countries or continents. You can also allow only specific countries."
@@ -1737,7 +1769,7 @@ msgstr "El usuario y la dirección IP no podrán iniciar sesión temporalmente d
 
 #: settings/config/fields/limit-login-attempts.php:58
 #: settings/config/fields/limit-login-attempts.php:82
-#: settings/config/fields/two-fa.php:75
+#: settings/config/fields/two-fa.php:72
 msgid "%s day"
 msgstr "%s día"
 
@@ -1791,14 +1823,14 @@ msgstr "Error de correo electrónico de aviso de prueba"
 #: settings/config/fields/firewall.php:285
 #: settings/config/fields/limit-login-attempts.php:199
 #: settings/config/fields/limit-login-attempts.php:323
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/src/Settings/GeoBlockList/TrustIpAddressModal.js:89
 #: settings/src/Settings/LimitLoginAttempts/AddIpAddressModal.js:81
 msgid "IP Address"
 msgstr "Dirección IP"
 
 #: security/wordpress/two-fa/class-rsssl-passkey-list-table.php:78
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/src/Settings/LearningMode/LearningMode.js:297
 msgid "Remove"
 msgstr "Eliminar"
@@ -1909,11 +1941,11 @@ msgstr "Activar el límite de intentos de acceso"
 msgid "Verify your email address to get the most out of Really Simple Security."
 msgstr "Verifica tu dirección de correo electrónico para aprovechar al máximo Really Simple Security."
 
-#: security/firewall-manager.php:595
+#: security/firewall-manager.php:723
 msgid "Please check if the advanced-headers.php file is included in the wp-config.php, and exists in the wp-content folder."
 msgstr "Por favor, comprueba si el archivo advanced-headers.php está incluido en wp-config.php y existe en la carpeta wp-content."
 
-#: security/firewall-manager.php:595
+#: security/firewall-manager.php:723
 msgid "A firewall rule was enabled, but the firewall does not seem to get loaded correctly."
 msgstr "Se ha activado una regla de cortafuegos, pero parece que no se carga correctamente."
 
@@ -2061,7 +2093,7 @@ msgstr "Las notificaciones de prueba se pueden utilizar para probar la entrega d
 
 #: settings/config/fields/vulnerability-detection.php:127
 #: settings/config/fields/vulnerability-detection.php:131
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/src/Settings/RiskConfiguration/NotificationTester.js:63
 msgid "Test notifications"
 msgstr "Notificaciones de prueba"
@@ -2257,7 +2289,7 @@ msgid "The 301 redirect with .htaccess to HTTPS is now enabled."
 msgstr "La redirección 301 con .htaccess a HTTPS está ahora activada."
 
 #: assets/templates/two_fa/onboarding.php:140
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/build/829.0d69f68a1345874307b1.js:1
 #: settings/src/Onboarding/OnboardingControls.js:201
 msgid "Skip"
@@ -2277,7 +2309,7 @@ msgstr "Actualización de ajustes: Redirección «.htaccess»"
 #: settings/config/fields/firewall.php:101
 #: settings/config/fields/firewall.php:106
 #: settings/config/fields/security-headers.php:14
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/src/Settings/DataTable/DataTableWrapper.js:167
 #: settings/src/Settings/DynamicDataTable/DynamicDataTable.js:168
 #: settings/src/Settings/EventLog/EventLogDataTable.js:232
@@ -2521,13 +2553,13 @@ msgid "Terms & Conditions"
 msgstr "Términos y condiciones"
 
 #: settings/config/fields/general.php:88
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/src/Settings/Support.js:45
 msgid "Send"
 msgstr "Enviar"
 
-#: class-admin.php:695 settings/build/366.5ee9613565c0155c0f8e.js:1
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: class-admin.php:699 settings/build/366.5ee9613565c0155c0f8e.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/build/829.0d69f68a1345874307b1.js:1
 #: settings/src/Dashboard/TaskElement.js:72
 #: settings/src/Dashboard/TaskElement.js:76
@@ -2541,20 +2573,20 @@ msgstr "Ver"
 #: settings/config/fields/limit-login-attempts.php:184
 #: settings/config/fields/limit-login-attempts.php:230
 #: settings/config/menu.php:506 settings/config/menu.php:574
-#: settings/config/menu.php:600 settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/config/menu.php:600 settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/src/Settings/LearningMode/LearningMode.js:149
 msgid "Blocked"
 msgstr "Bloqueado"
 
 #: settings/config/menu.php:514 settings/config/menu.php:608
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/src/Settings/LearningMode/LearningMode.js:148
 msgid "Allowed"
 msgstr "Permitido"
 
 #: settings/config/menu.php:339 settings/config/menu.php:486
 #: settings/config/menu.php:651 settings/config/menu.php:688
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/src/Settings/DataTable/DataTableWrapper.js:151
 #: settings/src/Settings/EventLog/EventLogDataTable.js:213
 #: settings/src/Settings/firewall/UserAgentTable.js:257
@@ -2572,7 +2604,7 @@ msgstr "Todo"
 #: settings/config/fields/limit-login-attempts.php:160
 #: settings/config/fields/limit-login-attempts.php:206
 #: settings/config/fields/limit-login-attempts.php:266
-#: settings/config/fields/two-fa.php:179
+#: settings/config/fields/two-fa.php:189
 #: settings/build/366.5ee9613565c0155c0f8e.js:1
 #: settings/src/Dashboard/SslLabs/SslLabsHeader.js:5
 msgid "Status"
@@ -2583,7 +2615,7 @@ msgid "Source"
 msgstr "Origen"
 
 #: settings/config/fields/security-headers.php:393
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/src/Settings/LearningMode/ManualCspAdditionModal.js:156
 msgid "Directive"
 msgstr "Directiva"
@@ -2635,7 +2667,7 @@ msgid "Self (Default)"
 msgstr "Auto (por defecto)"
 
 #: settings/config/fields/security-headers.php:214
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/src/Settings/LearningMode/LearningMode.js:335
 #: settings/src/Settings/LearningMode/LearningMode.js:343
 #: settings/src/Settings/PermissionsPolicy.js:200
@@ -2643,7 +2675,7 @@ msgid "Disable"
 msgstr "Desactivar"
 
 #: settings/config/fields/security-headers.php:214
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/src/Settings/GeoBlockList/GeoDatatable.js:278
 #: settings/src/Settings/GeoBlockList/GeoDatatable.js:295
 #: settings/src/Settings/GeoBlockList/GeoDatatable.js:473
@@ -2769,7 +2801,7 @@ msgid "Login status"
 msgstr "Estado de la conexión"
 
 #: settings/config/fields/hardening-xml.php:48
-#: settings/config/fields/two-fa.php:171
+#: settings/config/fields/two-fa.php:181
 msgid "Method"
 msgstr "Método"
 
@@ -2872,7 +2904,7 @@ msgstr "Verificación del DNS"
 msgid "General Settings"
 msgstr "Configuración General"
 
-#: settings/config/menu.php:68 settings/build/index.2f331b47060c19033fcf.js:1
+#: settings/config/menu.php:68 settings/build/index.80ef2b8658884d90e858.js:1
 #: settings/src/Header.js:32
 msgid "Let's Encrypt"
 msgstr "Let's Encrypt"
@@ -2955,8 +2987,8 @@ msgid "Changed debug.log location to:"
 msgstr "Cambiada la ubicación de debug.log a:"
 
 #: security/notices.php:93 settings/config/fields/limit-login-attempts.php:153
-#: settings/config/fields/two-fa.php:155
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/config/fields/two-fa.php:165
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/src/Settings/LimitLoginAttempts/AddUserModal.js:60
 msgid "Username"
 msgstr "Nombre de usuario"
@@ -2993,25 +3025,25 @@ msgstr "Una opción que requiere el archivo .htaccess está activada, pero el ar
 msgid ".htaccess not writable"
 msgstr ".htaccess no tiene permisos de escritura"
 
-#: security/firewall-manager.php:579
+#: security/firewall-manager.php:707
 msgid "Please set the wp-content folder to writable:"
 msgstr "Por favor, pon la carpeta wp-content con permisos de escritura:"
 
-#: security/firewall-manager.php:579
+#: security/firewall-manager.php:707
 msgid "A firewall rule was enabled, but /the wp-content/ folder is not writable."
 msgstr "Se ha activado una regla de firewall, pero la carpeta /wp-content/ no tiene permisos de escritura."
 
-#: security/firewall-manager.php:573
+#: security/firewall-manager.php:701
 msgid "Please set the wp-config.php to writable until the rule has been written."
 msgstr "Por favor, pon el wp-config.php con permisos de escritura hasta que la regla haya sido escrita."
 
-#: security/firewall-manager.php:573
+#: security/firewall-manager.php:701
 msgid "A firewall rule was enabled, but the wp-config.php is not writable."
 msgstr "Se ha activado una regla de firewall, pero el fichero wp-config.php no tiene permisos de escritura."
 
 #: onboarding/class-onboarding.php:522 onboarding/class-onboarding.php:563
-#: security/firewall-manager.php:572 security/firewall-manager.php:578
-#: security/firewall-manager.php:594 settings/config/menu.php:529
+#: security/firewall-manager.php:700 security/firewall-manager.php:706
+#: security/firewall-manager.php:722 settings/config/menu.php:529
 #: settings/config/menu.php:547 modal/build/index.d4bca8705bbc6e3e5777.js:1
 #: modal/src/components/DeactivationModal/DeactivationModal.js:71
 #: settings/build/366.5ee9613565c0155c0f8e.js:1
@@ -3073,7 +3105,7 @@ msgstr "Contenido mixto en %s"
 #: placeholders/class-placeholder.php:415
 #: placeholders/class-placeholder.php:440
 #: settings/build/366.5ee9613565c0155c0f8e.js:1
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/build/829.0d69f68a1345874307b1.js:1
 #: settings/src/Settings/MixedContentScan/MixedContentScan.js:90
 #: settings/src/Settings/RiskConfiguration/RiskData.js:115
@@ -3086,7 +3118,7 @@ msgstr "Contenido mixto en el archivo PHP en %s"
 
 #: onboarding/class-onboarding.php:305 settings/config/menu.php:755
 #: settings/build/366.5ee9613565c0155c0f8e.js:1
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/build/829.0d69f68a1345874307b1.js:1
 #: settings/src/Dashboard/OtherPlugins/OtherPluginsData.js:74
 #: settings/src/Onboarding/OnboardingControls.js:192
@@ -3193,7 +3225,7 @@ msgstr "Activación SSL en curso"
 msgid "SSL is not enabled on your network"
 msgstr "SSL no está activado en tu red"
 
-#: class-admin.php:201
+#: class-admin.php:205
 msgid "Improve security - Upgrade"
 msgstr "Mejora la seguridad - Actualizar"
 
@@ -3205,7 +3237,7 @@ msgstr "Puedes ver qué cabeceras de seguridad recomendadas no están presentes 
 msgid "To safely enable SSL on your server configuration, you should add the following line of code to your wp-config.php."
 msgstr "Para habilitar de forma segura el SSL en la configuración de tu servidor, debes añadir la siguiente línea de código a tu wp-config.php."
 
-#: class-admin.php:1959 settings/build/366.5ee9613565c0155c0f8e.js:1
+#: class-admin.php:1963 settings/build/366.5ee9613565c0155c0f8e.js:1
 #: settings/src/Dashboard/OtherPlugins/OtherPlugins.js:21
 msgid "Upgrade"
 msgstr "Actualizar"
@@ -3439,7 +3471,7 @@ msgid "Order ID mismatch, regenerate order."
 msgstr "El ID del pedido no coincide. Vuelve a generar el pedido."
 
 #: settings/config/fields/general.php:60
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/src/LetsEncrypt/Installation.js:95
 #: settings/src/LetsEncrypt/Installation.js:100
 #: settings/src/LetsEncrypt/Installation.js:104
@@ -3652,7 +3684,7 @@ msgid "This will include both the www. and non-www. version of your domain."
 msgstr "Esto incluirá tanto la versión www. como la no-www. de su dominio."
 
 #: lets-encrypt/config/fields.php:134 lets-encrypt/config/notices.php:51
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/src/LetsEncrypt/DnsVerification.js:62
 msgid "Domain"
 msgstr "Dominio"
@@ -4119,7 +4151,7 @@ msgid "It is not possible to install Let's Encrypt on a subsite. Please go to th
 msgstr "No es posible instalar Let's Encrypt en un subsitio. Por favor, vaya al sitio principal de su sitio web."
 
 #: class-admin.php:2146 settings/build/366.5ee9613565c0155c0f8e.js:1
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/build/829.0d69f68a1345874307b1.js:1
 #: settings/src/Dashboard/TaskElement.js:66
 msgid "Re-check"
@@ -4209,16 +4241,16 @@ msgstr "Really Simple Security detectó un certificado SSL, pero no se ha config
 msgid "SSL is not enabled."
 msgstr "SSL no está activado."
 
-#: class-admin.php:1958
+#: class-admin.php:1962
 msgid "Open"
 msgstr "Abrir"
 
-#: class-admin.php:1957 settings/build/485.d0638d40de0b99b17894.js:1
+#: class-admin.php:1961 settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/src/Settings/MixedContentScan/MixedContentScan.js:58
 msgid "Warning"
 msgstr "Advertencia"
 
-#: class-admin.php:1956
+#: class-admin.php:1960
 msgid "Completed"
 msgstr "Completado"
 
@@ -4275,7 +4307,7 @@ msgstr "No se ha detectado ninguna regla de redirección recomendada."
 msgid "General"
 msgstr "General"
 
-#: class-admin.php:196 settings/build/index.2f331b47060c19033fcf.js:1
+#: class-admin.php:200 settings/build/index.80ef2b8658884d90e858.js:1
 #: settings/src/Header.js:45
 msgid "Support"
 msgstr "Soporte"
@@ -4285,7 +4317,7 @@ msgid "SSL is enabled networkwide."
 msgstr "SSL está activado en toda la red."
 
 #: class-site-health.php:340 settings/build/366.5ee9613565c0155c0f8e.js:1
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/build/829.0d69f68a1345874307b1.js:1
 #: settings/src/Dashboard/Progress/ProgressFooter.js:24
 #: settings/src/Onboarding/OnboardingControls.js:168
@@ -4305,7 +4337,7 @@ msgstr "Contenido mixto"
 #: class-site-health.php:297
 #: settings/config/fields/vulnerability-detection.php:234
 #: settings/build/366.5ee9613565c0155c0f8e.js:1
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/src/Dashboard/SslLabs/SslLabs.js:320
 #: settings/src/LetsEncrypt/DnsVerification.js:57
 msgid "Read more"
@@ -4313,11 +4345,11 @@ msgstr "Leer más"
 
 #. translators: %1$ and %2$ are replaced with opening and closing a tag
 #. containing hyperlink
-#: class-admin.php:1768
+#: class-admin.php:1772
 msgid "Hi, Really Simple Security has kept your site secure for some time now, awesome! If you have a moment, please consider leaving a review on WordPress.org to spread the word. We greatly appreciate it! If you have any questions or feedback, leave us a %1$smessage%2$s."
 msgstr "Hola, ¡Really Simple Security ha mantenido tu sitio seguro durante algún tiempo, ¡impresionante! Si tienes un momento, por favor considera dejar una reseña en WordPress.org para ayudar a correr la voz. ¡Te lo agradeceríamos mucho! Si tienes alguna pregunta o comentario, déjanos un %1$smensaje%2$s."
 
-#: class-admin.php:1802
+#: class-admin.php:1806
 msgid "Don't show again"
 msgstr "No volver a mostrar"
 
@@ -4346,7 +4378,7 @@ msgstr "Has configurado una redirección 301 a SSL. Esto es importante para el S
 msgid "301 SSL redirect enabled"
 msgstr "Redirección SSL 301 activada"
 
-#: class-admin.php:691
+#: class-admin.php:695
 msgid "Dismiss"
 msgstr "Descartar"
 
@@ -4364,17 +4396,17 @@ msgstr "El archivo «force-deactivate.php» tiene que ser renombrado a «.txt».
 msgid "Once every month"
 msgstr "Una vez al mes"
 
-#: class-admin.php:1797
+#: class-admin.php:1801
 msgid "Maybe later"
 msgstr "Quizá más tarde"
 
-#: class-admin.php:1793
+#: class-admin.php:1797
 msgid "Leave a review"
 msgstr "Dejar una valoración"
 
 #. translators: %1$ and %2$ are replaced with opening and closing a tag
 #. containing hyperlink
-#: class-admin.php:1775
+#: class-admin.php:1779
 msgid "Hi, Really Simple Security has kept your site secure for a month now, awesome! If you have a moment, please consider leaving a review on WordPress.org to spread the word. We greatly appreciate it! If you have any questions or feedback, leave us a %1$smessage%2$s."
 msgstr "Hola, ¡Really Simple Security ha mantenido tu sitio seguro durante un mes, increíble! Si tienes un momento, considera dejar una reseña en WordPress.org para que corra la voz. ¡Te lo agradeceríamos mucho! Si tienes alguna pregunta o comentario, déjanos un %1$smensaje%2$s."
 
@@ -4392,7 +4424,7 @@ msgstr "Estás ejecutando una instalación multisitio con subdominios, pero tu s
 
 #: upgrade/upgrade-to-pro.php:339 modal/build/433.ef6236b038b45328e4c7.js:1
 #: modal/src/components/Modal/RssslModal.js:68
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/build/829.0d69f68a1345874307b1.js:1
 #: settings/src/Settings/firewall/UserAgentModal.js:151
 #: settings/src/Settings/GeoBlockList/TrustIpAddressModal.js:140
@@ -4402,8 +4434,8 @@ msgstr "Estás ejecutando una instalación multisitio con subdominios, pero tu s
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: class-admin.php:695 settings/build/366.5ee9613565c0155c0f8e.js:1
-#: settings/build/485.d0638d40de0b99b17894.js:1
+#: class-admin.php:699 settings/build/366.5ee9613565c0155c0f8e.js:1
+#: settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/build/829.0d69f68a1345874307b1.js:1
 #: settings/build/995.7a0675fe0519b06656b3.js:1
 #: settings/src/Dashboard/TaskElement.js:65 settings/src/Settings/Help.js:24
@@ -4411,7 +4443,7 @@ msgid "More info"
 msgstr "Más información"
 
 #. translators: %s is replaced with the hyperlink
-#: class-admin.php:235
+#: class-admin.php:239
 msgid "Really Simple Security and Really Simple Security add-ons do not process any personal identifiable information, so the GDPR does not apply to these plugins or usage of these plugins on your website. You can find our privacy policy <a href=\"%s\" rel=\"noopener noreferrer\" target=\"_blank\">here</a>."
 msgstr "Really Simple Security y las extensiones de Really Simple Security no procesan ninguna información personal identificable, por lo que el GDPR no se aplica a estos plugins ni al uso de estos plugins en tu sitio web. Puedes encontrar nuestra política de privacidad <a href=\"%s\" rel=\"noopener noreferrer\" target=\"_blank\">aquí</a>."
 
@@ -4488,7 +4520,7 @@ msgstr "https://really-simple-ssl.com"
 msgid "Stop editing the .htaccess file"
 msgstr "Detener la edición del archivo «.htaccess»"
 
-#: class-admin.php:189 class-admin.php:191 settings/config/menu.php:17
+#: class-admin.php:193 class-admin.php:195 settings/config/menu.php:17
 #: settings/config/menu.php:394 settings/build/366.5ee9613565c0155c0f8e.js:1
 #: settings/src/Dashboard/Vulnerabilities/Vulnerabilities.js:237
 #: settings/src/Dashboard/Vulnerabilities/VulnerabilitiesFooter.js:24
@@ -4515,7 +4547,7 @@ msgstr "Al no estar configurada la variable `$_SERVER[\"HTTPS\"]`, tu web puede 
 msgid "You run a Multisite installation with subfolders, which prevents this plugin from fixing your missing server variable in the wp-config.php."
 msgstr "Estás ejecutando una instalación multisitio con subcarpetas, lo que impide que este plugin corrija las variables que faltan en tu servidor en el archivo «wp-config.php»."
 
-#: class-admin.php:2062 settings/build/485.d0638d40de0b99b17894.js:1
+#: class-admin.php:2062 settings/build/485.cb8fb07cca57d56bca45.js:1
 #: settings/build/829.0d69f68a1345874307b1.js:1
 #: settings/src/Onboarding/Items/ListItem.js:46
 msgid "Check again"

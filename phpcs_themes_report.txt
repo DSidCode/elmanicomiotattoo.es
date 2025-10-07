@@ -1,0 +1,295 @@
+............................................................  60 / 937 (6%)
+............................................................ 120 / 937 (13%)
+............................................................ 180 / 937 (19%)
+............................................................ 240 / 937 (26%)
+............................................................ 300 / 937 (32%)
+............................................................ 360 / 937 (38%)
+............................................................ 420 / 937 (45%)
+.......E.................................................... 480 / 937 (51%)
+............................................................ 540 / 937 (58%)
+.........................E.............WWWWWW.WWWWWW.W...W.W 600 / 937 (64%)
+W.W....WW.WWWW.WW........................................... 660 / 937 (70%)
+............................................................ 720 / 937 (77%)
+............................................................ 780 / 937 (83%)
+............................................................ 840 / 937 (90%)
+............................................................ 900 / 937 (96%)
+.....................................                        937 / 937 (100%)
+
+
+
+FILE: ...otattoo_local/wp-content/themes/bridge/framework/lib/qode.welcome.page.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 37 | ERROR | Visibility for magic method __sleep must be public. Found:
+    |       | private
+--------------------------------------------------------------------------------
+
+
+FILE: ...elmanicomiotattoo_local/wp-content/themes/bridge/includes/recaptchalib.php
+--------------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 3 LINES
+--------------------------------------------------------------------------------
+ 219 | ERROR | The constant "MCRYPT_MODE_CBC" is deprecated since PHP 7.1 and
+     |       | removed since PHP 7.2
+ 220 | ERROR | The constant "MCRYPT_RIJNDAEL_128" is deprecated since PHP 7.1
+     |       | and removed since PHP 7.2
+ 222 | ERROR | Function mcrypt_encrypt() is deprecated since PHP 7.1 and
+     |       | removed since PHP 7.2; Use OpenSSL instead
+ 222 | ERROR | Extension 'mcrypt' is deprecated since PHP 7.1 and removed since
+     |       | PHP 7.2; Use openssl (preferred) or pecl/mcrypt once available
+     |       | instead
+--------------------------------------------------------------------------------
+
+
+FILE: ...p-content/themes/bridge/includes/shortcodes/qode_shortcodes_pie_chart3.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...ntent/themes/bridge/includes/shortcodes/qode_shortcodes_unordered_list.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...p-content/themes/bridge/includes/shortcodes/qode_shortcodes_expandable.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...-content/themes/bridge/includes/shortcodes/qode_shortcodes_latest_post.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...tattoo_local/wp-content/themes/bridge/includes/shortcodes/qode_circles.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...l/wp-content/themes/bridge/includes/shortcodes/qode_shortcodes_clients.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...wp-content/themes/bridge/includes/shortcodes/qode_shortcodes_separator.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...ent/themes/bridge/includes/shortcodes/qode_shortcodes_portfolio_slider.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...p-content/themes/bridge/includes/shortcodes/qode_shortcodes_pie_chart2.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...p-content/themes/bridge/includes/shortcodes/qode_shortcodes_line_graph.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...mes/bridge/includes/shortcodes/qode_shortcodes_progress_bar_horizontal.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...cal/wp-content/themes/bridge/includes/shortcodes/qode_shortcodes_video.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...p-content/themes/bridge/includes/shortcodes/qode_shortcodes_highlights.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...-content/themes/bridge/includes/shortcodes/qode_shortcodes_social_icon.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...l/wp-content/themes/bridge/includes/shortcodes/qode_shortcodes_section.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: .../wp-content/themes/bridge/includes/shortcodes/qode_shortcodes_dropcaps.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...t/themes/bridge/includes/shortcodes/qode_shortcodes_elements_animation.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...ocal/wp-content/themes/bridge/includes/shortcodes/qode_shortcodes_tabs.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...local/wp-content/themes/bridge/includes/shortcodes/qode_shortcodes_row.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...ntent/themes/bridge/includes/shortcodes/qode_shortcodes_portfolio_list.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...-content/themes/bridge/includes/shortcodes/qode_shortcodes_blockquotes.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...es/bridge/includes/shortcodes/qode_shortcodes_animated_icons_with_text.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...hemes/bridge/includes/shortcodes/qode_shortcodes_progress_bar_vertical.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...l/wp-content/themes/bridge/includes/shortcodes/qode_shortcodes_counter.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+
+FILE: ...wp-content/themes/bridge/includes/shortcodes/qode_shortcodes_pie_chart.php
+--------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 1 | WARNING | No PHP code was found in this file and short open tags are not
+   |         | allowed by this install of PHP. This file may be using short
+   |         | open tags but PHP does not allow them.
+--------------------------------------------------------------------------------
+
+Time: 3 mins, 8.98 secs; Memory: 106.01MB
+

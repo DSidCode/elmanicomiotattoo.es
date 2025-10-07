@@ -116,11 +116,7 @@ class Rsssl_Two_Factor
          * Runs the fix for the reset error in 9.1.1
          */
 	    if (filter_var(get_option('rsssl_reset_fix', false), FILTER_VALIDATE_BOOLEAN)) {
-            global $wpdb;
-            $queryBuilder = new Rsssl_Two_Fa_User_Query_Builder($wpdb);
-            $factory = new Rsssl_Two_Factor_User_Factory(new Rsssl_Two_Fa_Status_Service());
-            $repository = new Rsssl_Two_Fa_User_Repository($queryBuilder, $factory);
-            (new Rsssl_Two_Factor_Reset_Service($repository))->resetFix();
+		    RSSSL_Two_Factor_Reset_Factory::reset_fix();
 	    }
 
 //		add_action( 'login_enqueue_scripts', array( __CLASS__, 'twofa_scripts' ) );
@@ -1315,7 +1311,7 @@ class Rsssl_Two_Factor
      */
     private static function onboarding_user_html(WP_User $user): void
     {
-
+        $passkey_onboarding = get_user_meta($user->ID, 'rsssl_two_fa_status_passkey', true) === 'open';
         // Variables needed for the template and scripts
         $onboarding_url = self::login_url(array('action' => 'rsssl_onboarding'), 'login_post');
         $provider_loader = Rsssl_Provider_Loader::get_loader();
@@ -1327,6 +1323,13 @@ class Rsssl_Two_Factor
         $grace_period = Rsssl_Two_Factor_Settings::is_user_in_grace_period($user);
         $is_today = Rsssl_Two_Factor_Settings::is_today($user);
 
+        if ($passkey_onboarding) {
+            $is_forced = false;
+            //if only passkey is available, set it as the only provider
+            if (count($enabled_providers) === 1 && isset($enabled_providers['passkey'])) {
+                $provider = 'passkey';
+            }
+        }
         // Ensure login_header and login_footer functions are available
         if (!function_exists('login_header')) {
             include_once __DIR__ . '/function-login-header.php';
