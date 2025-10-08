@@ -1,28 +1,51 @@
-# Proyecto de Desarrollo Local para elmanicomiotattoo.es
+# El Manicomio Tattoo - Sitio Web Oficial
 
-## 1. Propósito
+Este repositorio contiene el código fuente y el proceso de desarrollo para la refactorización y modernización del sitio web oficial de **El Manicomio Tattoo Studio**. El proyecto tiene como objetivo transformar un sitio WordPress antiguo en una plataforma moderna, de alto rendimiento y totalmente personalizada.
 
-Este proyecto establece un entorno de desarrollo local y un flujo de trabajo profesional para el sitio web de WordPress `elmanicomiotattoo.es`. El objetivo principal es eliminar la práctica de editar código directamente en el servidor de producción, reduciendo el riesgo de errores y caídas del sitio.
+## Descripción del Proyecto
 
-## 2. Flujo de Trabajo
+El objetivo principal es estabilizar, optimizar y rediseñar por completo la presencia en línea del estudio de tatuajes. Esto implica:
 
-Seguimos un proceso de tres etapas: **Clonar → Codificar → Sincronizar**.
+1.  **Estabilización del Entorno**: Migrar el sitio a un entorno de desarrollo local moderno (Docker, PHP 8+) y solucionar incompatibilidades y errores críticos.
+2.  **Refactorización del Tema**: Abandonar temas de terceros (`Bridge`, `Astra`) para desarrollar un tema a medida desde cero, llamado `ManicomioTheme`, que otorga control absoluto sobre el diseño, el rendimiento y los derechos de autor.
+3.  **Optimización de Plugins**: Reducir la dependencia de plugins de terceros, manteniendo únicamente los esenciales (`Elementor`, `Elementor Pro`) para garantizar un rendimiento óptimo y una mantenibilidad a largo plazo.
+4.  **Rediseño de Experiencia de Usuario (UX)**: Implementar un nuevo sistema de diseño que refleje la identidad de marca del estudio.
 
-1.  **Clonar**: Copiar el sitio web completo (archivos y base de datos) del hosting a la máquina local.
-2.  **Codificar**: Escribir y probar el código en un entorno local aislado y controlado.
-3.  **Sincronizar**: Usar Git para gestionar los cambios y desplegarlos de forma segura al servidor en línea.
+## Sistema de Diseño (`ManicomioTheme`)
 
-## 3. Entorno de Desarrollo Local
+La nueva identidad visual se basa en la siguiente paleta de colores y tipografías:
 
-Para replicar el servidor de producción, el entorno local se gestionará con **Docker**. Esto garantiza la consistencia entre el entorno de desarrollo y el de producción, minimizando errores.
+### Colores
 
-El stack tecnológico es el típico de WordPress:
-- **Servidor Web**: Apache o Nginx
-- **Lenguaje**: PHP
-- **Base de Datos**: MySQL o MariaDB
+#### Colores de Marca (Personalizados)
+- **Brand 1**: `#007210`
+- **Brand 2**: `#4AFF07`
+- **Subtexto**: `#C9C9C9`
+- **Fondo**: `#000000`
 
-## 5. Estado Actual
+#### Colores del Sistema
+- **Principal**: `#FFFFFF`
+- **Secundario**: `#4C5056`
+- **Texto**: `#FFFFFF`
+- **Énfasis**: `#61CE70`
 
-- **Entorno Local**: El entorno de desarrollo local con Docker está configurado y en funcionamiento. El sitio es accesible en `http://localhost:8080`.
-- **Control de Versiones**: El repositorio de Git ha sido reiniciado con un historial limpio y profesional. El primer commit ya está subido a GitHub, excluyendo correctamente la carpeta `uploads`.
-- **Siguiente Paso Bloqueado**: Estamos intentando desactivar el modo de depuración en `wp-config.php`. Sin embargo, nos hemos encontrado con un problema de permisos persistente en el sistema del usuario (Kali/zsh) que impide la modificación del archivo incluso con `sudo` o siendo el propietario. El próximo paso es que el usuario edite manualmente el archivo para poder continuar.
+### Tipografías
+
+- **Principal**: Roboto, 600
+- **Secundario**: Roboto Slab, 400
+- **Texto**: Roboto, 400
+- **Énfasis**: Roboto, 500
+
+## Pila Tecnológica
+
+- **CMS**: WordPress
+- **Entorno de Desarrollo**: Docker
+- **Servidor Web**: Apache
+- **PHP**: 8.2+
+- **Base de Datos**: MariaDB
+- **Maquetador Visual**: Elementor & Elementor Pro
+- **Análisis de Código**: PHP_CodeSniffer con PHPCompatibilityWP
+
+## Autor
+
+Este proyecto está siendo diseñado y desarrollado por **SidzCool** como diseñador y desarrollador FullStack.

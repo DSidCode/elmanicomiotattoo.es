@@ -8,16 +8,20 @@ y este proyecto se adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.
 ## [Unreleased]
 
 ### Added
+- Definida la nueva estrategia de desarrollo con un tema personalizado: `ManicomioTheme`.
+- Establecido el nuevo sistema de diseño para `ManicomioTheme` con una paleta de colores y tipografías específicas para la marca.
 - Añadido el plugin de composer `dealerdirect/phpcodesniffer-composer-installer` para configurar automáticamente los estándares de `phpcs`.
 - Se han instalado y configurado las herramientas de análisis estático de código (`PHP_CodeSniffer` con `PHPCompatibilityWP`) para detectar de forma proactiva incompatibilidades con PHP 8+ y acelerar la estabilización del entorno local.
 
 ### Changed
+- La dirección del proyecto ha pivotado hacia la creación de un tema a medida (`ManicomioTheme`), descartando el uso de temas pre-hechos como `Astra` para obtener control total sobre el diseño y los derechos de autor.
 - Actualizadas las dependencias de Composer a versiones más recientes para asegurar la compatibilidad con PHP 8.4, incluyendo `phpcompatibility/phpcompatibility-wp` y `squizlabs/php_codesniffer`.
 - Se ha iniciado la estrategia de refactorización "Limpieza Radical", eliminando plugins y temas obsoletos y problemáticos.
 
 ### Removed
-- Plugins obsoletos y problemáticos: `revslider`, `js_composer`, `qode-instagram-widget`, `qode-twitter-feed`, `duplicator`, `cookie-notice`.
-- Temas obsoletos y problemáticos: `bridge` (padre) y `bridge-child` (hijo).
+- Se ha consolidado la pila de plugins, manteniendo únicamente `elementor` y `elementor-pro` para la maquetación, eliminando el resto de plugins de pago y de terceros que no son esenciales.
+- Plugins obsoletos y problemáticos eliminados: `revslider`, `js_composer`, `qode-instagram-widget`, `qode-twitter-feed`, `duplicator`, `cookie-notice`.
+- Temas obsoletos y problemáticos eliminados: `bridge` (padre), `bridge-child` (hijo) y `astra`.
 
 ### Fixed
 - Corregido un error de análisis de PHP (`PHP Parse error`) que impedía la ejecución de `phpcs` debido a una versión obsoleta de `php_codesniffer`.
