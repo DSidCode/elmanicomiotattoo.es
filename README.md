@@ -24,6 +24,7 @@ La nueva identidad visual se basa en la siguiente paleta de colores y tipografí
 - **Fondo**: `#000000`
 
 #### Colores del Sistema
+
 - **Principal**: `#FFFFFF`
 - **Secundario**: `#4C5056`
 - **Texto**: `#FFFFFF`
@@ -48,4 +49,4 @@ La nueva identidad visual se basa en la siguiente paleta de colores y tipografí
 
 ## Autor
 
-Este proyecto está siendo diseñado y desarrollado por **SidzCool** como diseñador y desarrollador FullStack.
+Este proyecto está siendo diseñado y desarrollado por **DaniSid.com** como diseñador y desarrollador FullStack.

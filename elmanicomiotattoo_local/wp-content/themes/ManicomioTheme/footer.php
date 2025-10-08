@@ -13,17 +13,11 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'manicomiometheme' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'manicomiometheme' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'manicomiometheme' ), 'manicomiometheme', '<a href="https://automattic.com/">Automattic</a>' );
-				?>
+			<?php
+				$site_name = get_bloginfo( 'name' );
+				$year      = date( 'Y' );
+				printf( esc_html__( 'Copyright © %1$s %2$s | Diseñado y desarrollado por %3$s.', 'manicomiometheme' ), esc_html( $year ), esc_html( $site_name ), '<a href="https://danisid.com" rel="author">DaniSid.com</a>' );
+			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

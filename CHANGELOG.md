@@ -8,22 +8,26 @@ y este proyecto se adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.
 ## [Unreleased]
 
 ### Added
+
 - Definida la nueva estrategia de desarrollo con un tema personalizado: `ManicomioTheme`.
 - Establecido el nuevo sistema de diseño para `ManicomioTheme` con una paleta de colores y tipografías específicas para la marca.
 - Añadido el plugin de composer `dealerdirect/phpcodesniffer-composer-installer` para configurar automáticamente los estándares de `phpcs`.
 - Se han instalado y configurado las herramientas de análisis estático de código (`PHP_CodeSniffer` con `PHPCompatibilityWP`) para detectar de forma proactiva incompatibilidades con PHP 8+ y acelerar la estabilización del entorno local.
 
 ### Changed
+
 - La dirección del proyecto ha pivotado hacia la creación de un tema a medida (`ManicomioTheme`), descartando el uso de temas pre-hechos como `Astra` para obtener control total sobre el diseño y los derechos de autor.
 - Actualizadas las dependencias de Composer a versiones más recientes para asegurar la compatibilidad con PHP 8.4, incluyendo `phpcompatibility/phpcompatibility-wp` y `squizlabs/php_codesniffer`.
 - Se ha iniciado la estrategia de refactorización "Limpieza Radical", eliminando plugins y temas obsoletos y problemáticos.
 
 ### Removed
+
 - Se ha consolidado la pila de plugins, manteniendo únicamente `elementor` y `elementor-pro` para la maquetación, eliminando el resto de plugins de pago y de terceros que no son esenciales.
 - Plugins obsoletos y problemáticos eliminados: `revslider`, `js_composer`, `qode-instagram-widget`, `qode-twitter-feed`, `duplicator`, `cookie-notice`.
 - Temas obsoletos y problemáticos eliminados: `bridge` (padre), `bridge-child` (hijo) y `astra`.
 
 ### Fixed
+
 - Corregido un error de análisis de PHP (`PHP Parse error`) que impedía la ejecución de `phpcs` debido a una versión obsoleta de `php_codesniffer`.
 - Corregida la configuración de `phpcs` que no detectaba el estándar `PHPCompatibilityWP` mediante la instalación del plugin `dealerdirect/phpcodesniffer-composer-installer` y la extensión `php-xml`.
 - Corregido un error de sintaxis fatal en el SDK de Freemius (incluido en `royal-elementor-addons`) que impedía la ejecución de `phpcs`. El error se debía al uso de llaves vacías en una sentencia `if`, una sintaxis obsoleta en PHP 8+.
@@ -32,8 +36,7 @@ y este proyecto se adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ## [0.2.3] - 2025-10-07
 
-### Fixed
-
+### Fixed (PHP 8+ Compatibility)
 - Corregido un error fatal de PHP en el plugin `redirection` (v5.3.10) que impedía la carga del sitio. El error se debía al uso de la sintaxis obsoleta de acceso a arrays con llaves (`{}`) en `models/redirect/redirect.php`, que no es compatible con PHP 8+.
 
 ## [0.2.2] - 2025-10-06
@@ -50,7 +53,7 @@ y este proyecto se adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ## [0.2.1] - 2025-10-06
 
-### Fixed (gitignore & permisos)
+### Fixed (Git & Permissions)
 
 - Se eliminaron las reglas de `.gitignore` que impedían el seguimiento del archivo `wp-config.php`.
 - Se intentó desactivar el modo de depuración de WordPress (`WP_DEBUG` a `false`) en `wp-config.php` para preparar el entorno para producción.
@@ -61,26 +64,26 @@ y este proyecto se adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.
 - Se reinició el repositorio de Git para empezar con un historial limpio y profesional, excluyendo la carpeta `uploads`.
 - Se conectó el repositorio local con el remoto en GitHub y se subió el primer commit limpio.
 
-### Known Issues
+### Known Issues (Git & Permissions)
 
 - Un problema persistente de permisos en el sistema del usuario (Kali/zsh) impide la modificación programática de `wp-config.php`, incluso después de cambiar el propietario del archivo. El próximo paso requiere una edición manual por parte del usuario.
 
 ## [0.2.0] - 2025-10-06
 
-### Fixed
+### Fixed (PHP 8+ Compatibility)
 
 - Corregido un error fatal de PHP en el plugin `js_composer` (WPBakery) debido a una sintaxis de operador ternario anidado no compatible con PHP 8+. Se ajustó el código en `class-vc-frontend-editor.php` para usar paréntesis, permitiendo que el sitio local cargue correctamente.
 
 ### Added
+
 - Inicializado el repositorio de Git en el directorio del proyecto.
 - Configurado el archivo `.gitignore` para excluir archivos de WordPress y del sistema.
 - Realizado el primer commit del proyecto.
 
-
-
 ## [0.1.0] - 2025-10-04
 
 ### Added
+
 - Configuracion inicial del proyecto.
 - Creacion de los archivos CHANGELOG.md y README.md.
 - Definicion del flujo de trabajo profesional (Clonar -> Codificar -> Sincronizar).

@@ -1,14 +1,14 @@
 /*!
 Theme Name: ManicomioTheme
-Theme URI: https://underscores.me/
-Author: Automattic
-Author URI: https://automattic.com/
-Description: Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Theme URI: https://github.com/DSidCode/elmanicomiotattoo.es
+Author: DaniSid.com
+Author URI: https://danisid.com/
+Description: Tema personalizado para El Manicomio Tattoo Studio, diseñado para un control total, alto rendimiento y una identidad de marca única. Desarrollado por DaniSid.com.
 Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
-License URI: LICENSE
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: manicomiometheme
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
@@ -24,6 +24,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Sistema de Diseño (Variables CSS)
+	- Colores
+	- Tipografías
 ----------------------------------------------------------------
 # Generic
 	- Normalize
@@ -49,6 +53,42 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Sistema de Diseño (Variables CSS)
+--------------------------------------------------------------*/
+:root {
+	/* Paleta de Colores de Marca */
+	--color-brand-1: #007210;
+	--color-brand-2: #4AFF07;
+	--color-subtext: #C9C9C9;
+	--color-background: #000000;
+
+	/* Paleta de Colores del Sistema */
+	--color-primary: #FFFFFF;
+	--color-secondary: #4C5056;
+	--color-text: #FFFFFF;
+	--color-emphasis: #61CE70;
+
+	/* Tipografías del Sistema */
+	--font-primary: "Roboto", sans-serif;
+	--font-secondary: "Roboto Slab", serif;
+
+	/* Pesos de Fuente */
+	--font-weight-text: 400;
+	--font-weight-emphasis: 500;
+	--font-weight-primary: 600;
+
+	/* Asignaciones de Tipografía */
+	--ff-principal: var(--font-primary);
+	--fw-principal: var(--font-weight-primary);
+	--ff-secundario: var(--font-secondary);
+	--fw-secundario: var(--font-weight-text); /* 400 */
+	--ff-texto: var(--font-primary);
+	--fw-texto: var(--font-weight-text); /* 400 */
+	--ff-enfasis: var(--font-primary);
+	--fw-enfasis: var(--font-weight-emphasis);
+}
 
 /*--------------------------------------------------------------
 # Generic
