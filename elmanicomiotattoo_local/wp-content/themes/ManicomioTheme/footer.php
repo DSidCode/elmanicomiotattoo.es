@@ -52,6 +52,15 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+<div class="redes-sociales-flotantes">
+    <a href="https://www.instagram.com/elmanicomiotattoo/" target="_blank" class="boton-flotante instagram" title="Síguenos en Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.tiktok.com/@elmanicomiotattoo" target="_blank" class="boton-flotante tiktok" title="Síguenos en TikTok">
+        <i class="fab fa-tiktok"></i>
+    </a>
+</div>
+
 <?php wp_footer(); ?>
 
 </body>

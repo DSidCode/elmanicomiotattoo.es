@@ -314,7 +314,7 @@ fieldset {
  * 1. Correct the text wrapping in Edge and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
  * 3. Remove the padding so developers are not caught out when they zero out
- *		`fieldset` elements in all browsers.
+ * `fieldset` elements in all browsers.
  */
 legend {
 	box-sizing: border-box;
@@ -768,11 +768,41 @@ textarea {
 	text-decoration: none;
 	font-family: var(--ff-principal);
 	font-weight: var(--fw-principal);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding-bottom: 5px;
+	position: relative;
+	transition: color 0.3s ease;
 }
 
 .main-navigation a:hover,
 .main-navigation a:focus {
 	color: var(--color-brand-2);
+}
+
+/* Underline effect */
+.main-navigation a::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: var(--color-brand-2);
+	transform: scaleX(0);
+	transform-origin: center;
+	transition: transform 0.4s ease;
+}
+
+/* Underline animation on hover/focus */
+.main-navigation a:hover::after,
+.main-navigation a:focus::after {
+	transform: scaleX(1);
+}
+
+/* Keep underline for current page */
+.main-navigation .current-menu-item > a::after {
+	transform: scaleX(1);
 }
 
 @media screen and (min-width: 37.5em) {
@@ -1129,4 +1159,46 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1.5em;
+}
+
+/* Contenedor de los botones flotantes */
+.redes-sociales-flotantes {
+    position: fixed; /* Hace que el contenedor se quede fijo en la ventana */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    right: 20px; /* Distancia desde la parte derecha */
+    z-index: 1000; /* Asegura que estén por encima de otros elementos */
+    display: flex;
+    flex-direction: column; /* Apila los botones verticalmente */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+/* Estilo general para cada botón */
+.boton-flotante {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Ancho del botón */
+    height: 50px; /* Alto del botón */
+    border-radius: 50%; /* Forma circular */
+    color: white; /* Color del icono */
+    font-size: 24px; /* Tamaño del icono */
+    text-decoration: none; /* Quitar el subrayado del enlace */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+}
+
+/* Efecto al pasar el ratón */
+.boton-flotante:hover {
+    transform: scale(1.1); /* Agranda ligeramente el botón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Colores específicos de Instagram (ejemplo) */
+.boton-flotante.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+/* Colores específicos de TikTok */
+.boton-flotante.tiktok {
+    background-color: #000000; /* Negro */
+    box-shadow: 2px 0 0 #25f4ee, -2px 0 0 #fe2c55; /* Efecto "fantasma" de TikTok */
 }

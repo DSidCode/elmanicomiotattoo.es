@@ -214,3 +214,9 @@ if ( class_exists( 'WooCommerce' ) ) {
  * Custom Post Type definitions.
  */
 require get_template_directory() . '/inc/post-types.php';
+
+function cargar_font_awesome_para_redes_sociales() {
+    // Carga la versión gratuita de Font Awesome 5 (o 6, si la prefieres) desde un CDN
+    wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css', array(), '5.15.4' );
+}
+add_action( 'wp_enqueue_scripts', 'cargar_font_awesome_para_redes_sociales' );
