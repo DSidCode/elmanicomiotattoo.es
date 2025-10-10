@@ -439,15 +439,22 @@ html {
 /* Typography
 --------------------------------------------- */
 body,
-button,
-input,
-select,
-optgroup,
-textarea {
-	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+button, input, select, optgroup, textarea {
+	color: var(--color-text);
+	font-family: var(--ff-texto);
+	font-weight: var(--fw-texto);
 	font-size: 1rem;
 	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--ff-principal);
+	font-weight: var(--fw-principal);
 }
 
 h1,
@@ -460,6 +467,7 @@ h6 {
 }
 
 p {
+	font-family: var(--ff-texto);
 	margin-bottom: 1.5em;
 }
 
@@ -514,7 +522,8 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-	background: #fff;
+	background: var(--color-background);
+	color: var(--color-text);
 }
 
 hr {
@@ -575,17 +584,17 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: var(--color-brand-2);
 }
 
 a:visited {
-	color: #800080;
+	color: var(--color-emphasis);
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #191970;
+	color: var(--color-primary);
 }
 
 a:focus {
@@ -690,7 +699,9 @@ textarea {
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
+	clear: both;
 	display: block;
+	float: left;
 	width: 100%;
 }
 
@@ -705,6 +716,13 @@ textarea {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
+	display: block;
+	width: 100%;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
 	top: 100%;
 	left: -999em;
 	z-index: 99999;
@@ -745,6 +763,18 @@ textarea {
 	display: block;
 }
 
+.main-navigation a {
+	color: var(--color-primary);
+	text-decoration: none;
+	font-family: var(--ff-principal);
+	font-weight: var(--fw-principal);
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+	color: var(--color-brand-2);
+}
+
 @media screen and (min-width: 37.5em) {
 
 	.menu-toggle {
@@ -753,8 +783,27 @@ textarea {
 
 	.main-navigation ul {
 		display: flex;
+		gap: 1.5em; /* Espacio entre elementos del menú */
 	}
 }
+
+/* Estructura de la cabecera */
+.site-header {
+	background-color: var(--color-background);
+	padding: 1em 2em;
+	border-bottom: 1px solid var(--color-secondary);
+}
+
+.site-branding-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	}
+
+	.main-navigation ul {
+		display: flex;
+	}
+
 
 .site-main .comment-navigation,
 .site-main
@@ -762,6 +811,78 @@ textarea {
 .site-main
 .post-navigation {
 	margin: 0 0 1.5em;
+}
+
+.footer-widgets-container {
+	background-color: var(--color-background);
+	padding: 2em;
+	border-top: 1px solid var(--color-secondary);
+}
+
+.footer-widgets {
+	display: grid;
+	gap: 2em;
+}
+
+@media screen and (min-width: 600px) {
+	.footer-widgets {
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	}
+}
+
+.footer-widgets .widget-title {
+	font-family: var(--ff-principal);
+	font-weight: var(--fw-principal);
+	color: var(--color-brand-2);
+	margin-bottom: 1em;
+}
+
+.footer-widgets .widget a {
+	text-decoration: none;
+}
+
+.site-footer {
+	background-color: var(--color-background);
+}
+
+.site-info {
+	padding: 1.5em 2em;
+	text-align: center;
+	border-top: 1px solid var(--color-secondary);
+}
+
+.single-post-container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 2em;
+}
+
+.single-post-container .entry-title {
+	font-size: 2.5rem;
+	margin-bottom: 0.5em;
+	color: var(--color-brand-2);
+}
+
+.single-post-container .entry-meta {
+	font-family: var(--ff-secundario);
+	color: var(--color-subtext);
+	margin-bottom: 2em;
+}
+
+.single-post-container .entry-meta a {
+	color: var(--color-subtext);
+	text-decoration: none;
+}
+
+.single-post-container .entry-meta a:hover {
+	color: var(--color-primary);
+}
+
+.post-navigation .nav-links {
+	border-top: 1px solid var(--color-secondary);
+	border-bottom: 1px solid var(--color-secondary);
+	padding: 1em 0;
+	margin-top: 2em;
 }
 
 .comment-navigation .nav-links,

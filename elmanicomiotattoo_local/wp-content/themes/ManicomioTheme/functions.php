@@ -50,6 +50,7 @@ function manicomiometheme_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'manicomiometheme' ),
+			'footer' => esc_html__( 'Footer Menu', 'manicomiometheme' ),
 		)
 	);
 
@@ -131,6 +132,28 @@ function manicomiometheme_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer 1', 'manicomiometheme' ),
+			'id'            => 'footer-1',
+			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'manicomiometheme' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer 2', 'manicomiometheme' ),
+			'id'            => 'footer-2',
+			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'manicomiometheme' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 }
 add_action( 'widgets_init', 'manicomiometheme_widgets_init' );
 
@@ -138,11 +161,15 @@ add_action( 'widgets_init', 'manicomiometheme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function manicomiometheme_scripts() {
-	wp_enqueue_style( '_s-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( '_s-style', 'rtl', 'replace' );
+	// Carga de Google Fonts.
+	wp_enqueue_style( 'manicomiometheme-google-fonts', 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Roboto+Slab:wght@400&display=swap', array(), null );
 
-	wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	// Carga de la hoja de estilos principal del tema.
+	wp_enqueue_style( 'manicomiotheme-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_style_add_data( 'manicomiometheme-style', 'rtl', 'replace' );
 
+	// Carga del script de navegación.
+	wp_enqueue_script( 'manicomiometheme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -182,3 +209,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Custom Post Type definitions.
+ */
+require get_template_directory() . '/inc/post-types.php';
