@@ -1,25 +1,19 @@
-/**
- * File navigation.js.
- *
- * Handles toggling the navigation menu for small screens and enables TAB key
- * navigation support for dropdown menus.
- */
 ( function() {
 	const siteNavigation = document.getElementById( 'site-navigation' );
 
-	// Return early if the navigation doesn't exist.
+	// Return early if the navigation don't exist.
 	if ( ! siteNavigation ) {
 		return;
 	}
 
-	const button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
+	const button = siteNavigation.getElementsByTagName( 'button' )[0];
 
-	// Return early if the button doesn't exist.
+	// Return early if the button don't exist.
 	if ( 'undefined' === typeof button ) {
 		return;
 	}
 
-	const menu = siteNavigation.getElementsByTagName( 'ul' )[ 0 ];
+	const menu = siteNavigation.getElementsByTagName( 'ul' )[0];
 
 	// Hide menu toggle button if menu is empty and return early.
 	if ( 'undefined' === typeof menu ) {
@@ -34,6 +28,7 @@
 	// Toggle the .toggled class and the aria-expanded value each time the button is clicked.
 	button.addEventListener( 'click', function() {
 		siteNavigation.classList.toggle( 'toggled' );
+        document.body.classList.toggle('mobile-menu-open'); // Bloquea el scroll del body
 
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );
@@ -48,52 +43,43 @@
 
 		if ( ! isClickInside ) {
 			siteNavigation.classList.remove( 'toggled' );
+            document.body.classList.remove('mobile-menu-open');
 			button.setAttribute( 'aria-expanded', 'false' );
 		}
 	} );
 
-	// Get all the link elements within the menu.
-	const links = menu.getElementsByTagName( 'a' );
+    // Trap keyboard navigation in the menu modal.
+    document.addEventListener( 'keydown', function( event ) {
+        if (!document.body.classList.contains('mobile-menu-open')) {
+            return;
+        }
 
-	// Get all the link elements with children within the menu.
-	const linksWithChildren = menu.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
+        const modal = siteNavigation;
+        const selectors = 'a, button';
+        const elements = modal.querySelectorAll( selectors );
+        const firstEl = elements[0];
+        const lastEl = elements[elements.length - 1];
+        const tabKey = event.keyCode === 9;
+        const shiftKey = event.shiftKey;
+        const escKey = event.keyCode === 27;
 
-	// Toggle focus each time a menu link is focused or blurred.
-	for ( const link of links ) {
-		link.addEventListener( 'focus', toggleFocus, true );
-		link.addEventListener( 'blur', toggleFocus, true );
-	}
+        if ( escKey ) {
+            event.preventDefault();
+            siteNavigation.classList.remove( 'toggled' );
+            document.body.classList.remove('mobile-menu-open');
+            button.setAttribute( 'aria-expanded', 'false' );
+            button.focus();
+        }
 
-	// Toggle focus each time a menu link with children receive a touch event.
-	for ( const link of linksWithChildren ) {
-		link.addEventListener( 'touchstart', toggleFocus, false );
-	}
+        if ( ! shiftKey && tabKey && lastEl === document.activeElement ) {
+            event.preventDefault();
+            firstEl.focus();
+        }
 
-	/**
-	 * Sets or removes .focus class on an element.
-	 */
-	function toggleFocus() {
-		if ( event.type === 'focus' || event.type === 'blur' ) {
-			let self = this;
-			// Move up through the ancestors of the current link until we hit .nav-menu.
-			while ( ! self.classList.contains( 'nav-menu' ) ) {
-				// On li elements toggle the class .focus.
-				if ( 'li' === self.tagName.toLowerCase() ) {
-					self.classList.toggle( 'focus' );
-				}
-				self = self.parentNode;
-			}
-		}
+        if ( shiftKey && tabKey && firstEl === document.activeElement ) {
+            event.preventDefault();
+            lastEl.focus();
+        }
+    } );
 
-		if ( event.type === 'touchstart' ) {
-			const menuItem = this.parentNode;
-			event.preventDefault();
-			for ( const link of menuItem.parentNode.children ) {
-				if ( menuItem !== link ) {
-					link.classList.remove( 'focus' );
-				}
-			}
-			menuItem.classList.toggle( 'focus' );
-		}
-	}
-}() );
+} )();

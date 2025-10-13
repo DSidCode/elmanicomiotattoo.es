@@ -17,6 +17,8 @@ Thumbs.db
 /elmanicomiotattoo_local/wp-content/wp-cache-config.php
 /elmanicomiotattoo_local/wp-content/smush-webp/
 /elmanicomiotattoo_local/debug.log
+/elmanicomiotattoo_local/wp-content/plugins/
+/elmanicomiotattoo_local/wp-content/languages/
 
 # Dependencias de Composer
 /vendor/

@@ -8,6 +8,24 @@ y este proyecto se adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.
 ## [Unreleased]
 
 ### Added
+- **Panel de Opciones del Tema**: Creado el panel "ManicomioTheme" en el administrador de WordPress usando la Settings API. Incluye opciones para activar/desactivar el carrusel de cabecera y configurar el número de imágenes a mostrar.
+- **Cabecera de Página Dinámica**: Implementado un carrusel de imágenes aleatorias y un título con efecto animado ("brillo") en la plantilla de página (`page.php`). La visualización de esta sección se controla desde el nuevo panel de opciones.
+- **Instalación Local de WP-CLI**: Se descargó `wp-cli.phar` al directorio raíz del proyecto para facilitar la gestión del sitio por línea de comandos.
+- **Informe de Sesión**: Creado el archivo `Informe_Implementacion_y_Diagnostico_Semana_13_Oct.md` que documenta en detalle los avances y diagnósticos de la sesión.
+
+### Changed
+- El archivo `functions.php` fue modificado para añadir la lógica del panel de opciones y para encolar el nuevo script del carrusel (`js/carousel.js`).
+- El archivo `page.php` fue reestructurado para incluir la lógica condicional del nuevo carrusel y título animado, basado en los ajustes del panel de opciones.
+- El archivo `style.css` fue actualizado para incluir los estilos de la animación de título `.brillo` y del carrusel `.page-carousel-container`.
+
+### Fixed
+- **Diagnóstico de Base de Datos (Parcial)**: Se identificó que el error de conexión a la base de datos en el entorno Docker se debe a una configuración incorrecta en la inicialización de los contenedores (probablemente por falta de un archivo `.env`), no a un error en `wp-config.php`. La solución (recrear el volumen de la base de datos) ha sido pospuesta.
+
+---
+
+## [0.3.0] - 2025-10-12
+
+### Added
 
 - Definida la nueva estrategia de desarrollo con un tema personalizado: `ManicomioTheme`.
 - Establecido el nuevo sistema de diseño para `ManicomioTheme` con una paleta de colores y tipografías específicas para la marca.

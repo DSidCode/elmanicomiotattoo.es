@@ -170,6 +170,9 @@ function manicomiometheme_scripts() {
 
 	// Carga del script de navegación.
 	wp_enqueue_script( 'manicomiometheme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+
+	// Carga del script del carrusel.
+	wp_enqueue_script( 'manicomiometheme-carousel', get_template_directory_uri() . '/js/carousel.js', array(), _S_VERSION, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -220,3 +223,85 @@ function cargar_font_awesome_para_redes_sociales() {
     wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css', array(), '5.15.4' );
 }
 add_action( 'wp_enqueue_scripts', 'cargar_font_awesome_para_redes_sociales' );
+
+// --- Panel de Opciones del Tema ---
+
+// 1. Crear la página de opciones en el menú de administración.
+function manicomiortheme_add_admin_menu() {
+    add_menu_page(
+        'Opciones de ManicomioTheme', // Título de la página
+        'ManicomioTheme',            // Título del menú
+        'manage_options',            // Capacidad requerida
+        'manicomiortheme_options',   // Slug del menú
+        'manicomiortheme_options_page_html', // Función que renderiza la página
+        'dashicons-admin-customizer', // Icono
+        60                           // Posición
+    );
+}
+add_action('admin_menu', 'manicomiortheme_add_admin_menu');
+
+// 2. Registrar los ajustes del tema.
+function manicomiortheme_settings_init() {
+    // Registrar un grupo de ajustes
+    register_setting('manicomiortheme_options_group', 'manicomiortheme_options');
+
+    // Añadir una sección para los ajustes del carrusel
+    add_settings_section(
+        'manicomiortheme_carousel_section',
+        'Ajustes del Carrusel',
+        null, // Callback para la descripción de la sección (opcional)
+        'manicomiortheme_options_page'
+    );
+
+    // Añadir el campo para habilitar/deshabilitar el carrusel
+    add_settings_field(
+        'carousel_enabled',
+        'Activar Carrusel en Páginas',
+        'manicomiortheme_carousel_enabled_callback',
+        'manicomiortheme_options_page',
+        'manicomiortheme_carousel_section'
+    );
+
+    // Añadir el campo para el número de imágenes
+    add_settings_field(
+        'carousel_image_count',
+        'Número de Imágenes en el Carrusel',
+        'manicomiortheme_carousel_image_count_callback',
+        'manicomiortheme_options_page',
+        'manicomiortheme_carousel_section'
+    );
+}
+add_action('admin_init', 'manicomiortheme_settings_init');
+
+// 3. Callbacks para renderizar los campos del formulario.
+
+function manicomiortheme_carousel_enabled_callback() {
+    $options = get_option('manicomiortheme_options');
+    $checked = isset($options['carousel_enabled']) ? 'checked="checked"' : '';
+    echo '<input type="checkbox" id="carousel_enabled" name="manicomiortheme_options[carousel_enabled]" value="1" ' . $checked . ' />';
+}
+
+function manicomiortheme_carousel_image_count_callback() {
+    $options = get_option('manicomiortheme_options');
+    $value = isset($options['carousel_image_count']) ? $options['carousel_image_count'] : 5;
+    echo '<input type="number" id="carousel_image_count" name="manicomiortheme_options[carousel_image_count]" value="' . esc_attr($value) . '" min="1" max="10" />';
+}
+
+// 4. Función para renderizar la página de opciones.
+function manicomiortheme_options_page_html() {
+    if (!current_user_can('manage_options')) {
+        return;
+    }
+    ?>
+    <div class="wrap">
+        <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
+        <form action="options.php" method="post">
+            <?php
+            settings_fields('manicomiortheme_options_group');
+            do_settings_sections('manicomiortheme_options_page');
+            submit_button('Guardar Cambios');
+            ?>
+        </form>
+    </div>
+    <?php
+}

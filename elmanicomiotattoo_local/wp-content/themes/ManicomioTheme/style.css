@@ -526,6 +526,10 @@ body {
 	color: var(--color-text);
 }
 
+body.mobile-menu-open {
+    overflow: hidden;
+}
+
 hr {
 	background-color: #ccc;
 	border: 0;
@@ -701,12 +705,10 @@ textarea {
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
 	width: 100%;
 }
 
 .main-navigation ul {
-	display: none;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
@@ -716,16 +718,10 @@ textarea {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
-	display: block;
-	width: 100%;
-}
-
-.main-navigation ul {
 	display: none;
-	list-style: none;
-	top: 100%;
 	left: -999em;
 	z-index: 99999;
+	width: 180px;
 }
 
 .main-navigation ul ul ul {
@@ -735,12 +731,7 @@ textarea {
 
 .main-navigation ul ul li:hover > ul,
 .main-navigation ul ul li.focus > ul {
-	display: block;
-	left: auto;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
+	left: 100%;
 }
 
 .main-navigation ul li:hover > ul,
@@ -750,17 +741,6 @@ textarea {
 
 .main-navigation li {
 	position: relative;
-}
-
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
 }
 
 .main-navigation a {
@@ -805,15 +785,14 @@ textarea {
 	transform: scaleX(1);
 }
 
-@media screen and (min-width: 37.5em) {
+.menu-toggle {
+	display: none;
+}
 
-	.menu-toggle {
-		display: none;
-	}
-
-	.main-navigation ul {
+@media screen and (min-width: 600px) {
+	.main-navigation ul#primary-menu {
 		display: flex;
-		gap: 1.5em; /* Espacio entre elementos del menú */
+		gap: 1.5em;
 	}
 }
 
@@ -828,12 +807,7 @@ textarea {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	}
-
-	.main-navigation ul {
-		display: flex;
-	}
-
+}
 
 .site-main .comment-navigation,
 .site-main
@@ -1201,4 +1175,174 @@ textarea {
 .boton-flotante.tiktok {
     background-color: #000000; /* Negro */
     box-shadow: 2px 0 0 #25f4ee, -2px 0 0 #fe2c55; /* Efecto "fantasma" de TikTok */
+}
+
+/* --- Mobile Menu Styles --- */
+@keyframes glitch-appear {
+    0% {
+        transform: translate(-3px, 3px);
+        opacity: 0;
+    }
+    25% {
+        transform: translate(3px, -3px);
+        opacity: 0.2;
+    }
+    50% {
+        transform: translate(-2px, 2px);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 599px) {
+    .menu-toggle {
+        display: block; /* Visible en móvil */
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 1001;
+    }
+
+    .hamburger-box {
+        display: inline-block;
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 2px;
+        background-color: var(--color-primary);
+        transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        left: 0;
+    }
+
+    .hamburger-inner {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .hamburger-inner::before {
+        top: -8px;
+    }
+
+    .hamburger-inner::after {
+        bottom: -8px;
+    }
+
+    .main-navigation.toggled .hamburger-inner {
+        transform: rotate(135deg);
+    }
+
+    .main-navigation.toggled .hamburger-inner::before {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    .main-navigation.toggled .hamburger-inner::after {
+        bottom: 0;
+        transform: rotate(90deg);
+    }
+
+    .main-navigation ul#primary-menu {
+        display: none; 
+    }
+
+    .main-navigation.toggled ul#primary-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--color-background);
+        z-index: 1000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-navigation.toggled li {
+        margin: 0.8em 0; 
+        opacity: 0;
+        animation: glitch-appear 0.4s ease-out forwards;
+    }
+
+    .main-navigation.toggled li:nth-child(1) { animation-delay: 0.2s; }
+    .main-navigation.toggled li:nth-child(2) { animation-delay: 0.3s; }
+    .main-navigation.toggled li:nth-child(3) { animation-delay: 0.4s; }
+    .main-navigation.toggled li:nth-child(4) { animation-delay: 0.5s; }
+    .main-navigation.toggled li:nth-child(5) { animation-delay: 0.6s; }
+
+    .main-navigation.toggled a {
+        font-size: 1.2rem; 
+    }
+}
+
+/*--------------------------------------------------------------
+## Carrusel y Título Animado
+--------------------------------------------------------------*/
+.page-carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* O el ancho que prefieras */
+    margin: 0 auto 2em auto;
+    overflow: hidden;
+    height: 500px; /* Altura del carrusel */
+}
+
+.page-carousel-slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.page-carousel-slide.active {
+    display: block;
+}
+
+.page-carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+}
+
+.brillo {
+  text-align: center;
+  margin-bottom: 1em;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 10s infinite linear;
+  white-space: nowrap;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: 880px;
+  }
+  100% {
+    background-position: 0px;
+  }
 }
