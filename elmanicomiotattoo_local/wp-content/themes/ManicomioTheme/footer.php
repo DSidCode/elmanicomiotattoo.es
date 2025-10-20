@@ -46,7 +46,13 @@
 			<?php
 			$site_name = get_bloginfo( 'name' );
 			$year      = date( 'Y' );
-			printf( esc_html__( 'Copyright © %1$s %2$s | Diseñado y desarrollado por %3$s.', 'manicomiometheme' ), esc_html( $year ), esc_html( $site_name ), '<a href="https://danisid.com" rel="author">DaniSid.com</a>' );
+			/* translators: 1: Current year, 2: Site name, 3: Author link. */
+			printf(
+				wp_kses_post( __( 'Copyright © %1$s %2$s | Designed and developed by %3$s.', 'manicomiometheme' ) ),
+				esc_html( $year ),
+				esc_html( $site_name ),
+				'<a href="https://danisid.com" rel="author">DaniSid.com</a>'
+			);
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
