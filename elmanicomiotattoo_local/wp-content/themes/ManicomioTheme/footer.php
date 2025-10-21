@@ -47,25 +47,36 @@
 			$site_name = get_bloginfo( 'name' );
 			$year      = date( 'Y' );
 			/* translators: 1: Current year, 2: Site name, 3: Author link. */
-			printf(
-				wp_kses_post( __( 'Copyright © %1$s %2$s | Designed and developed by %3$s.', 'manicomiometheme' ) ),
+			$copyright_text = sprintf(
+				/* translators: 1: Current year, 2: Site name, 3: Author link. */
+				__( 'Copyright © %1$s %2$s | Designed and developed by %3$s.', 'manicomiometheme' ),
 				esc_html( $year ),
 				esc_html( $site_name ),
-				'<a href="https://danisid.com" rel="author">DaniSid.com</a>'
+				'<a href="https://danisid.com" rel="author" target="_blank" rel="noopener noreferrer">DaniSid.com</a>'
 			);
+			echo wp_kses_post( $copyright_text );
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-<div class="redes-sociales-flotantes">
-    <a href="https://www.instagram.com/elmanicomiotattoo/" target="_blank" class="boton-flotante instagram" title="Síguenos en Instagram">
-        <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://www.tiktok.com/@elmanicomiotattoo" target="_blank" class="boton-flotante tiktok" title="Síguenos en TikTok">
-        <i class="fab fa-tiktok"></i>
-    </a>
-</div>
+<?php
+if ( has_nav_menu( 'social' ) ) :
+	?>
+	<nav class="redes-sociales-flotantes" aria-label="<?php esc_attr_e( 'Social Media Links', 'manicomiometheme' ); ?>">
+		<?php
+		wp_nav_menu(
+			array(
+				'theme_location' => 'social',
+				'menu_class'     => 'social-links-menu',
+				'depth'          => 1,
+				'link_before'    => '<span class="screen-reader-text">',
+				'link_after'     => '</span>',
+			)
+		);
+		?>
+	</nav><!-- .redes-sociales-flotantes -->
+<?php endif; ?>
 
 <?php wp_footer(); ?>
 
