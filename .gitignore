@@ -8,17 +8,33 @@ Thumbs.db
 
 # Archivos de WordPress que no deben estar en el repositorio
 
-/elmanicomiotattoo_local/.htaccess
-/elmanicomiotattoo_local/wp-content/uploads/
-/elmanicomiotattoo_local/wp-content/upgrade/
-/elmanicomiotattoo_local/wp-content/backups-dup-lite/
-/elmanicomiotattoo_local/wp-content/cache/
-/elmanicomiotattoo_local/wp-content/advanced-cache.php
-/elmanicomiotattoo_local/wp-content/wp-cache-config.php
-/elmanicomiotattoo_local/wp-content/smush-webp/
-/elmanicomiotattoo_local/debug.log
-/elmanicomiotattoo_local/wp-content/plugins/
-/elmanicomiotattoo_local/wp-content/languages/
+/.htaccess
+elmanicomiotattoo_local/wp-content/uploads/
+elmanicomiotattoo_local/wp-content/2023/
+elmanicomiotattoo_local/wp-content/2024/
+elmanicomiotattoo_local/wp-content/2025/
+elmanicomiotattoo_local/wp-content/astra-docs/
+elmanicomiotattoo_local/wp-content/cfdb7_uploads/
+elmanicomiotattoo_local/wp-content/complianz/
+elmanicomiotattoo_local/wp-content/elementor/
+elmanicomiotattoo_local/wp-content/js_composer/
+elmanicomiotattoo_local/wp-content/mainwp/
+elmanicomiotattoo_local/wp-content/rsssl/
+elmanicomiotattoo_local/wp-content/smush-webp-test.png
+elmanicomiotattoo_local/wp-content/smush/
+elmanicomiotattoo_local/wp-content/wpcf7_captcha/
+elmanicomiotattoo_local/wp-content/wpcf7_uploads/
+elmanicomiotattoo_local/wp-content/wpforms/
+elmanicomiotattoo_local/wp-content/wpmc-trash/
+/wp-content/upgrade/
+/wp-content/backups-dup-lite/
+/wp-content/cache/
+/wp-content/advanced-cache.php
+/wp-content/wp-cache-config.php
+/wp-content/smush-webp/
+/debug.log
+/wp-content/plugins/
+/wp-content/languages/
 
 # Dependencias de Composer
 /vendor/

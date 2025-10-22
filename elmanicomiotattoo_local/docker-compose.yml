@@ -3,6 +3,7 @@ services:
     image: mariadb:10.6 # Usamos MariaDB, que es compatible con MySQL
     volumes:
       - db_data:/var/lib/mysql
+      - ../docker/mysql:/docker-entrypoint-initdb.d
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}

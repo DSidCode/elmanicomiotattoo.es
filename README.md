@@ -48,5 +48,14 @@ La nueva identidad visual se basa en la siguiente paleta de colores y tipografí
 - **Análisis de Código**: PHP_CodeSniffer con PHPCompatibilityWP
 
 ## Autor
+### Entorno de Desarrollo (Host)
+
+- **Sistema Operativo**: Nobara Linux 42 (basado en Fedora)
+- **Hardware**:
+    - **CPU**: 13th Gen Intel Core i7-13700HX
+    - **GPU**: NVIDIA GeForce RTX 5060 Mobile
+    - **RAM**: 32 GB
+
+## Autor
 
 Este proyecto está siendo diseñado y desarrollado por **DaniSid.com** como diseñador y desarrollador FullStack.

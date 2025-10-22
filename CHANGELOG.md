@@ -12,6 +12,11 @@ y este proyecto se adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.
 - **Cabecera de Página Dinámica**: Implementado un carrusel de imágenes aleatorias y un título con efecto animado ("brillo") en la plantilla de página (`page.php`). La visualización de esta sección se controla desde el nuevo panel de opciones.
 - **Instalación Local de WP-CLI**: Se descargó `wp-cli.phar` al directorio raíz del proyecto para facilitar la gestión del sitio por línea de comandos.
 - **Informe de Sesión**: Creado el archivo `Informe_Implementacion_y_Diagnostico_Semana_13_Oct.md` que documenta en detalle los avances y diagnósticos de la sesión.
+- **Configuración de Entorno Docker en Nobara**: Se instaló y configuró Docker Engine y Docker Compose en el nuevo sistema anfitrión Nobara Linux, incluyendo la resolución de problemas de instalación y permisos. Ver `Informe_Docker_Nobara_Setup.md` para detalles.
+- **Migración de Entorno de Desarrollo**: El proyecto ha sido migrado a un nuevo sistema anfitrión (Nobara Linux 42) con hardware de alto rendimiento (Intel i7-13700HX, 32GB RAM, NVIDIA RTX 5060), mejorando significativamente las capacidades y velocidad de desarrollo.
+
+### Added
+- **Plantilla de Archivo `.env`**: Se proporcionó una plantilla para el archivo `.env` con las variables de entorno necesarias para la configuración de Docker Compose y WordPress.
 
 ### Changed
 - El archivo `functions.php` fue modificado para añadir la lógica del panel de opciones y para encolar el nuevo script del carrusel (`js/carousel.js`).
@@ -19,6 +24,10 @@ y este proyecto se adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.
 - El archivo `style.css` fue actualizado para incluir los estilos de la animación de título `.brillo` y del carrusel `.page-carousel-container`.
 
 ### Fixed
+- **Uso de Comando Docker Compose**: Corregido el uso del comando `docker-compose` a `docker compose` (con espacio) para compatibilidad con las versiones más recientes de Docker.
+- **Archivo `docker-compose.yml`**: Se diagnosticó la ausencia del archivo `docker-compose.yml` en el directorio de ejecución y se proporcionaron pasos para su verificación y creación.
+- **Configuración de Credenciales DB**: Se identificó la necesidad del archivo `.env` para las credenciales de la base de datos y se discutió la inconsistencia en el uso de variables entre `.env` y `docker-compose.yml` para la configuración de la base de datos.
+- **Configuración `.gitignore`**: Se actualizó el archivo `.gitignore` para excluir correctamente la carpeta `wp-content/uploads/` y otros archivos/directorios específicos de WordPress, corrigiendo el prefijo de ruta.
 - **Diagnóstico de Base de Datos (Parcial)**: Se identificó que el error de conexión a la base de datos en el entorno Docker se debe a una configuración incorrecta en la inicialización de los contenedores (probablemente por falta de un archivo `.env`), no a un error en `wp-config.php`. La solución (recrear el volumen de la base de datos) ha sido pospuesta.
 
 ---
