@@ -3,7 +3,7 @@ services:
     image: mariadb:10.6 # Usamos MariaDB, que es compatible con MySQL
     volumes:
       - db_data:/var/lib/mysql
-      - ../docker/mysql:/docker-entrypoint-initdb.d
+      - ../docker/mysql:/docker-entrypoint-initdb.d # Carga el backup .sql al iniciar
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
@@ -20,8 +20,8 @@ services:
     restart: always
     environment:
       WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: root
-      WORDPRESS_DB_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      WORDPRESS_DB_USER: ${MYSQL_USER} # Usamos el usuario específico de WP
+      WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD} # Usamos la contraseña del usuario de WP
       WORDPRESS_DB_NAME: ${MYSQL_DATABASE}
     depends_on:
       - db

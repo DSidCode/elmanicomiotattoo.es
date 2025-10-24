@@ -24,6 +24,11 @@ y este proyecto se adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.
 - El archivo `style.css` fue actualizado para incluir los estilos de la animación de título `.brillo` y del carrusel `.page-carousel-container`.
 
 ### Fixed
+- **Configuración de Credenciales DB**: Se creó el archivo `.env` con las credenciales de la base de datos (`MYSQL_DATABASE`, `MYSQL_USER`, `MYSQL_PASSWORD`, `MYSQL_ROOT_PASSWORD`) y se corrigió el problema del carácter `#` en la contraseña mediante el uso de comillas dobles.
+- **Instalación de Plugin**: Se instaló y activó el plugin `pro-elements` (probablemente Elementor Pro) desde un archivo `.zip` dentro del contenedor de WordPress, incluyendo la instalación de la utilidad `unzip` en el contenedor.
+- **Carga de Contenido Multimedia**: Se diagnosticó que los archivos multimedia no estaban físicamente presentes en la carpeta `wp-content/uploads` del host. Se corrigió descomprimiendo el `uploads.zip` en una carpeta temporal y moviendo su contenido a la ubicación correcta, resolviendo problemas de permisos y estructura anidada del zip.
+- **Actualización de URLs en DB**: Se ejecutó `wp search-replace` para actualizar todas las URLs de `elmanicomiotattoo.es` a `http://localhost:8080` en la base de datos de WordPress, solucionando problemas de enlaces rotos y visualización de medios.
+- **Caché de WordPress**: Se limpió la caché de WordPress usando WP-CLI para asegurar que los cambios en la base de datos y archivos se reflejaran correctamente.
 - **Uso de Comando Docker Compose**: Corregido el uso del comando `docker-compose` a `docker compose` (con espacio) para compatibilidad con las versiones más recientes de Docker.
 - **Archivo `docker-compose.yml`**: Se diagnosticó la ausencia del archivo `docker-compose.yml` en el directorio de ejecución y se proporcionaron pasos para su verificación y creación.
 - **Configuración de Credenciales DB**: Se identificó la necesidad del archivo `.env` para las credenciales de la base de datos y se discutió la inconsistencia en el uso de variables entre `.env` y `docker-compose.yml` para la configuración de la base de datos.
