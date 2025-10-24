@@ -33,8 +33,10 @@ elmanicomiotattoo_local/wp-content/wpmc-trash/
 /wp-content/wp-cache-config.php
 /wp-content/smush-webp/
 /debug.log
-/wp-content/plugins/
-/wp-content/languages/
+elmanicomiotattoo_local/wp-content/plugins/
+elmanicomiotattoo_local/wp-content/languages/
+elmanicomiotattoo_local/.env
+elmanicomiotattoo_local/.htaccess
 
 # Dependencias de Composer
 /vendor/
